@@ -24,7 +24,7 @@ Algorithms were originally developed and implemented for a video game project.<b
 
 [Interactive WebGL application](https://apingis.github.io/v2/index-demo2.html) for visibility in 3D (desktop only)
 
-
+&nbsp;
 
 [<img src="https://apingis.github.io/img/supportme.png">](https://www.patreon.com/apingis)
 

@@ -1,0 +1,40 @@
+{
+
+"wind":{"name":"wind","duration":500.0,"tracks":[
+
+{"name":".strength",
+"times":
+[0,4,30,45,60, 170,185,200, 250,280,300,450,500, 530,560,600],
+"values":
+[0.001,0.02,0.05,0.005,0.04, 0.04,0.001,0.04, 0.05,0.001,0.03,0.01,0.001, 0.04,0.05,0.001],
+"interpolation":2301,"type":"number"},
+
+{"name":".gustStrength",
+"times":
+[0,4,30,60,200, 250,280,300,450,500, 530,560,600],
+"values":
+[0,0,0.08,0.12,0.13, 0.15,0.05,0.13,0.1,0, 0.1,0.15,0],
+"interpolation":2301,"type":"number"}
+
+]},
+
+
+
+
+"robotUnload":{"name":"robotUnload","duration":3,"tracks":[
+
+{"name":"arm1.quaternion",
+"times":
+[0,3],
+"values":
+[0,0,0,1, 0,0,-0.49262,0.87024],
+"interpolation":2301,"type":"quaternion"}
+
+
+
+]}
+
+
+
+}
+
