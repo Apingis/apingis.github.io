@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Hyperellipse Algorithms</title>
+	<link href="../img/favicon.png" rel="icon" />
+
+</head>
+
+
+<body>
+</body>
+
+<script>
+function getParam(name){
+   if ( (name = (new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search)) )
+      return decodeURIComponent(name[1]);
+}
+
+
+var AppConfig = {
+
+	confName: "demo1",
+	lang: getParam("lang"),
+	//forceLang: 
+	DEBUG: 3,
+	isTest() {},
+
+	localStatic: 0,
+	urlStatic: "./",
+	noServer: 1,
+	//urlServerRequest: "{$conf["urlServerRequest"]}",
+	//origin: "{$conf["origin"]}",
+
+	isVK: 0,
+	isDemo1() { return true },
+	isDemo2() {},
+};
+</script>
+
+
+<script src="js/Loading/Loader.js"></script>
+<script src="js/Loading/LoadingScreen.js"></script>
+<script src="js/Loading/Loader-noServer.js"></script>
+
+</html>
+
