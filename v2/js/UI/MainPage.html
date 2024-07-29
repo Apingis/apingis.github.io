@@ -1,0 +1,559 @@
+<div>Loaded Successfully</div>
+
+<div>Not for display as .html! loads into div.innerHTML</div>
+<div style="background-color:black;height:2vh;margin:2vh"></div>
+
+
+
+
+<div id="application-main-page">
+
+
+
+<div id="app-container">
+
+
+<div id="stats2" style="z-index:-3002;display:none">
+	<div id="stats2-0" class="stats2-line"></div>
+	<div id="stats2-1" class="stats2-line"></div>
+	<div id="stats2-2" class="stats2-line"></div>
+	<div id="stats2-3" class="stats2-line"></div>
+	<div id="stats2-4" class="stats2-line"></div>
+</div>
+
+
+
+<div>
+
+	<div id="item-hover" class="item-hover bg-small-paper-wrinkled" style="display:none;border-color:#424bff">
+
+		<div id="hover-name" class="hover-name text2b"></div>
+		<div id="hover-descr"><span id="hover-descr-msg"></span></div>
+		<div id="hover-hitStrength"><span id="hover-hitStrength-msg">Hit Str:</span><span id="hover-hitStrength-val">0</span><div id="hover-hitStrengthVsTree" style="color:#004200"> (<span id="hover-hitStrengthVsTree-msg"></span><span id="hover-hitStrengthVsTree-val"></span>)</div></div>
+		<div id="hover-hitRate"><span id="hover-hitRate-msg">Hit Rate:</span><span id="hover-hitRate-val">0</span></div>
+		<div id="hover-equipSpeed"><span id="hover-equipSpeed-msg">Equip Speed:</span><span id="hover-equipSpeed-val">0</span></div>
+		<div id="hover-cost"><span id="hover-cost-msg">Cost:</span><div class="icon-coins-inline icon-inline-wide1"></div><span id="hover-cost-val">0</span></div>
+	</div>
+
+
+	<div id="item-hover-3d" class="item-hover bg-small-paper-wrinkled" style="display:none">
+
+		<div id="hover-name" class="hover-name text2b"></div>
+		<!--div id="hover-descr"><span id="hover-descr-msg"></span></div-->
+		<div id="hover-trunk-height"><span id="hover-trunk-height-msg">trunk-height:</span><span id="hover-trunk-height-val">0</span>&nbsp;<span>m</span></div>
+		<div id="hover-base-radius"><span id="hover-base-radius-msg">base r:</span><span id="hover-base-radius-val">0</span>&nbsp;<span>m</span></div>
+		<div id="hover-branches"><span id="hover-branches-msg">branches:</span><span id="hover-branches-val">0</span></div>
+		<div id="hover-radius"><span id="hover-radius-msg">r:</span><span id="hover-radius-val">0</span>&nbsp;<span id="units-distance">m</span></div>
+		<div id="hover-mass"><span id="hover-mass-msg">r:</span><span id="hover-mass-val">0</span>&nbsp;<span id="units-mass"></span></div>
+
+		<div id="hover-container-empty"><span id="hover-container-empty-msg"></span></div>
+		<div id="hover-container-logs"><span id="hover-container-logs-msg"></span> <span id="hover-container-logs-val"></span> <span id="units-volume"></span><span><sup>3</sup></span></div>
+	</div>
+
+
+	<div id="char-hover-3d" class="bg-small-paper-wrinkled" style="display:none">
+
+		<div id="hover-name" class="hover-name text2b"></div>
+
+		<div style="display:flex">
+			<div id="char-hover-3d-img-wrapper" style=""></div>
+		</div>
+	</div>
+
+
+	<div id="construction-item-hover" class="bg-screen-paper-wrinkled" style="display:none">
+
+		<div id="item-name" class="text3b" style="text-align:center;padding:0.5vh 0"></div>
+		<div id="img-anchor"></div>
+		<div id="description-1"></div>
+		<div id="description-2"></div>
+		<div id="description-3"></div>
+	</div>
+
+
+
+	<div id="disassembly-window" class="bg-screen-bricks" style="display:none">
+
+		<div style="display:flex">
+
+			<div style="flex:99;align-self:center">
+				<span id="disassembly-window-hdr" class="text2b"></span>
+			</div>
+
+			<div class="btn-2 btn-2-size1a btn-bg3" style="margin:0.7vh" onclick="UI.pressEsc()">
+				<div class="icon-cancel-x btn-2-size1a"></div>
+			</div>
+		</div>
+
+		<div style="display:flex">
+			<div id="disassembly-window-warning" class="text0 info-section-warn"></div>
+		</div>
+
+		<div style="display:flex">
+			<div id="disassembly-time-msg"></div>
+			<div id="disassembly-time-val" class="margin2"></div>
+			<div id="units-minutes"></div>
+		</div>
+
+		<div id="disassembly-reward" style="display:flex">
+			<div id="disassembly-reward-msg" style="margin-right:1vh"></div>
+			<div id="price-coins" class="icon-coins-inline icon-inline-wide1"></div>
+			<div id="price-crystals" class="icon-crystals-inline icon-inline-wide1"></div>
+			<div id="price-val" class="text1b margin1"></div>
+		</div>
+
+		<div class="checkbox" style="margin:1vh 3vh 1vh 0">
+			<input type="checkbox" id="disassembly-chk" onclick="DisassemblyWindow.clickCheckbox()">
+			<label for="disassembly-chk" id="disassembly-chk-msg"></label>
+		</div>
+
+		<div style="display:flex;justify-content:center;margin-top:1.5vh">
+			<div id="" class="btn-bg1" style="height:1%;display:flex">
+				<div id="disassembly-window-btn" class="btn-2 btn-2-height1 padding1" onclick="DisassemblyWindow.clickStart()">
+					<div id="disassembly-window-btn-msg" class="text2b margin1"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div id="construction-start-window" class="bg-screen-bricks" style="display:none">
+
+		<div style="display:flex">
+
+			<div style="flex:99;align-self:center">
+				<span id="constructionstart-window-hdr" class="text2b"></span>
+			</div>
+
+			<div class="btn-2 btn-2-size1a btn-bg1" style="margin:0.7vh" onclick="ScreenConstructionStartInfo.clickBackChooseLocation()">
+				<div class="icon-cancel-x btn-2-size1a"></div>
+			</div>
+		</div>
+
+		<div style="display:flex;align-items:center">
+
+			<div style="display:flex;align-items:center">
+				<div class="btn-2 btn-2-size1 btn-bg2" style="margin:0.7vh" onclick="ScreenConstructionStartInfo.clickBackChooseLocation()">
+					<div class="icon-arrow-left btn-2-size1"></div>
+				</div>
+				<div id="constructionstart-window-back-choose-location"></div>
+			</div>
+
+			<div style="flex:50"></div>
+
+			<div style="display:flex;margin-left:7vh">
+				<div id="" class="section3-has-overhdr section3-construction">
+
+					<div class="section3-overhdr">
+						<div></div>
+						<div><div id="constructionstart-angle"></div></div>
+						<div></div>
+					</div>
+
+					<div style="display:flex;align-items:center">
+
+						<div class="btn-2 btn-2-size1 btn-bg3"
+								onmousedown="ScreenConstructionStartInfo.btnPress('facing', 'L')"
+								onmouseup="ScreenConstructionStartInfo.btnRelease('facing', 'L')"
+								onmouseleave="ScreenConstructionStartInfo.btnRelease('facing', 'L')">
+							<div class="icon-turn-left btn-2-size1"></div>
+						</div>
+
+						<div class="btn-2 btn-2-size1 btn-bg2"
+								onmousedown="ScreenConstructionStartInfo.btnPress('facing', 'R')"
+								onmouseup="ScreenConstructionStartInfo.btnRelease('facing', 'R')"
+								onmouseleave="ScreenConstructionStartInfo.btnRelease('facing', 'R')">
+							<div class="icon-turn-right btn-2-size1"></div>
+						</div>
+
+						<div id="facing-val" style="font-weight:bold;padding:0 1vh 0 1.5vh"></div>
+						<div id="units-radians"></div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div style="flex:50"></div>
+
+		</div>
+
+
+		<div id="constructionstart-window-warning" class="text0"></div>
+
+
+		<div id="constructionstart-intersectData">
+
+			<div id="intersect-wrapper" class="section3-has-overhdr section3-red">
+
+				<div class="section3-overhdr">
+					<div></div>
+					<div><div id="constructionstart-intersect-msg"></div></div>
+					<div></div>
+				</div>
+
+				<div>
+					<div id="intersect" style="overflow:hidden"></div>
+				</div>
+			</div>
+
+			<div id="toRemove-wrapper" class="section3-has-overhdr section3-construction">
+
+				<div class="section3-overhdr">
+					<div></div>
+					<div><div id="constructionstart-toRemove-msg"></div></div>
+					<div></div>
+				</div>
+
+				<div>
+					<div id="toRemove" style="overflow:hidden"></div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div style="display:flex;margin-top:0.35vh"">
+			<div id="constructionstart-window-no-money" class="info-section info-section-red text0" style="padding:0.35vh 1vh"></div>
+		</div>
+
+		<div style="display:flex;justify-content:center;margin-top:1.5vh">
+			<div id="" class="btn-bg2" style="height:1%">
+				<div id="constructionstart-window-btn-build" class="btn-2 btn-2-height1 padding1" onclick="ScreenConstructionStartInfo.clickBeginConstruction()">
+					<div id="constructionstart-window-btn-build-msg" class="text2b margin1"></div>
+					<div id="price-coins" class="icon-coins-wide btn-2-size-wide1 margin1"></div>
+					<div id="price-crystals" class="icon-crystals-wide btn-2-size-wide1 margin1"></div>
+					<div id="price-val" class="text2b margin1"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div id="cursor-addup" class="text2b bg-small-paper2" style="z-index:5200">
+		<div style=""></div>
+	</div>
+<!--
+	<div id="cursor-axe-yellow" class="cursor-axe-yellow cursor-div" style="z-index:5212"></div>
+	<div id="cursor-grab-yellow" class="cursor-grab-yellow cursor-div cursor-transparent" style="z-index:5222"></div>
+	<div id="cursor-piledrop-red" class="cursor-piledrop-red cursor-div" style="z-index:5242"></div>
+-->
+	<div id="cursor-cancel" class="cursor-cancel cursor-div" style="z-index:5201"></div>
+
+	<div id="cursor-axe-green" class="cursor-axe-green cursor-div cursor-animated" style="z-index:5211"></div>
+
+	<div id="cursor-grab-green" class="cursor-grab-green cursor-div cursor-animated" style="z-index:5221"></div>
+	<div id="cursor-grab-red" class="cursor-grab-red cursor-div" style="z-index:5223"></div>
+
+	<div id="cursor-drop-green" class="cursor-drop-green cursor-div cursor-animated" style="z-index:5231"></div>
+	<div id="cursor-drop-red" class="cursor-drop-red cursor-div" style="z-index:5232"></div>
+
+	<div id="cursor-piledrop-green" class="cursor-piledrop-green cursor-div cursor-animated" style="z-index:5241"></div>
+
+	<div id="cursor-select-green" class="cursor-select-green cursor-div cursor-animated" style="z-index:5251"></div>
+
+	<div id="cursor-load-green" class="cursor-load-green cursor-div cursor-animated2" style="z-index:5260"></div>
+	<div id="cursor-unload-green" class="cursor-unload-green cursor-div cursor-animated2" style="z-index:5261"></div>
+	<div id="cursor-unload-red" class="cursor-unload-red cursor-div cursor-animated2" style="z-index:5262"></div>
+	<div id="cursor-unload-to-storage-green" class="cursor-unload-to-storage-green cursor-div cursor-animated2" style="z-index:5263"></div>
+	<div id="cursor-unload-to-storage-red" class="cursor-unload-to-storage-red cursor-div cursor-animated2" style="z-index:5264"></div>
+
+
+	<div id="tooltip-main"><div id="tooltip-text"></div></div>
+</div>
+
+
+
+<div id="buttons-top-container" style="display:flex;">
+
+	<div id="buttons-top-row-1" style="display:flex;align-items:flex-start;">
+
+	<div id="buttons-top-row-2-anchor-top" style="display:flex">
+	</div>
+
+	<div id="buttons-top-row-1-right" style="display:flex;">
+<!--
+		<div id="uilevel" style="height:0;align-self:center">
+			<div style="transform:translateY(-50%)">
+				<div class="bg-img-level level-outer" tooltip="level" style="margin-right:0.5vw;pointer-events:auto">
+					<div id="uilevel-value" class="level-inner">0</div>
+					<div class="level-aura"></div>
+				</div>
+			</div>
+		</div>
+-->
+		<div style="display:flex;flex-direction:column">
+
+			<div id="uicoins" style="margin-left:0.5vw">
+
+				<div class="uicoins-bg" style="position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1"></div>
+
+				<div class="btn-2 btn-size-uicoins btn-bg1" id="btn-uicoins" tooltip style="margin-left:0.3vh" onclick="UI.clickPaymentSelection()">
+					<div class="icon-plus btn-size-uicoins"></div>
+				</div>
+
+				<div id="uicoins-by-type">
+					<div>
+						<div class="icon-coins-inline icon-inline-wide1"></div>
+						<span id="uicoins-coins-val">0</span>
+					</div>
+
+					<div>
+						<div class="icon-crystals-inline icon-inline-wide1"></div>
+						<span id="uicoins-crystals-val">0</span>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="payment-selection" style="display:none">
+
+				<div style="position:absolute;left:0;top:0;z-index:1;display:flex">
+
+					<div class="payment-selection-bg bg-small-paper2"></div>
+
+					<!-- payment Items -->
+
+					<div style="position:relative;width:0;height:0">
+
+						<div id="payment-selection-cancel">
+
+							<div class="payment-selection-bg bg-small-paper2" style="border-radius:0 4px 4px 0"></div>
+
+							<div class="btn-2 btn-2-size2 btn-bg1" onclick="UI.clickPaymentSelection(false)">
+								<div class="icon-cancel-x btn-2-size2"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div> <!-- payment-selection -->
+
+		</div>
+
+
+
+		<div class="btn-2 btn-2-size2 btn-bg2" id="button-help" style="margin-left:0.5vw" onclick="Buttons.clickHelp()">
+			<div class="icon-help-simple btn-2-size2"></div>
+		</div>
+
+		<div class="btn-2 btn-2-size2 btn-bg3" id="icon-fullscreen" tooltip style="display:block" onclick="Controls.fullscreenEnter()">
+			<div class="icon-fullscreen btn-2-size2"></div>
+		</div>
+		<div class="btn-2 btn-2-size2 btn-bg1" id="icon-fullscreen-leave" tooltip style="display:none" onclick="Controls.fullscreenLeave()">
+			<div class="icon-fullscreen-leave btn-2-size2"></div>
+		</div>
+
+		<div class="btn-2 btn-2-size2 btn-bg2" id="button-gears" tooltip onclick="Buttons.clickGears()">
+			<div class="icon-gears btn-2-size2"></div>
+		</div>
+
+	</div>
+
+	</div> <!-- buttons-top-row-1 -->
+
+</div>
+
+
+
+<div id="buttons-top-row-2-anchor-below" style="display:flex">
+</div>
+
+
+
+<div id="buttons-bottom-container">
+
+	<div id="buttons-row-bottom">
+
+		<div class="btn-2 btn-2-size2 btn-bg3" id="btn-char-prev" tooltip onclick="Buttons.clickNextUnit(true)">
+			<div class="icon-char-prev btn-2-size2"></div>
+		</div>
+		<div class="btn-2 btn-2-size2 btn-bg1" id="btn-char-next" tooltip onclick="Buttons.clickNextUnit()">
+			<div class="icon-char-next btn-2-size2"></div>
+		</div>
+
+		<div class="btn-spacing2"></div>
+
+		<div class="btn-2 btn-2-size2 btn-bg2" tooltip="btn-home" onclick="Buttons.clickHome()">
+			<div class="icon-house btn-2-size2"></div>
+		</div>
+
+
+		<div id="buttons-bottom-2" style="display:flex">
+
+			<div class="btn-spacing2"></div>
+
+			<div class="btn-2 btn-2-size2 btn-bg3" onmousedown="Controls.press('left')" onmouseup="Controls.release('left')" onmouseleave="Controls.release('left')">
+				<div class="icon-turn-left btn-2-size2" ></div>
+			</div>
+
+			<div style="position:relative">
+
+				<div class="btn-2 btn-2-size2"></div>
+
+				<div style="display:flex;flex-direction:column;position:absolute;bottom:0">
+
+					<div class="btn-2 btn-2-size2 btn-bg1" onmousedown="Controls.press('up')" onmouseup="Controls.release('up')" onmouseleave="Controls.release('up')">
+						<div class="icon-arrow-up btn-2-size2" style=""></div>
+					</div>
+					<div class="btn-2 btn-2-size2 btn-bg1" style="" onmousedown="Controls.press('down')" onmouseup="Controls.release('down')" onmouseleave="Controls.release('down')">
+						<div class="icon-arrow-up btn-2-size2" style="transform:rotate(180deg)"></div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="btn-2 btn-2-size2 btn-bg1" onmousedown="Controls.press('right')" onmouseup="Controls.release('right')" onmouseleave="Controls.release('right')">
+				<div class="icon-turn-right btn-2-size2"></div>
+			</div>
+
+			<div class="btn-spacing2"></div>
+
+			<div class="btn-2 btn-2-size2 btn-bg1" tooltip="btn-zoom-in" onclick="Buttons.clickZoom(true)">
+				<div class="icon-zoom-in btn-2-size2"></div>
+			</div>
+			<div class="btn-2 btn-2-size2 btn-bg2" tooltip="btn-zoom-out" onclick="Buttons.clickZoom()">
+				<div class="icon-zoom-out btn-2-size2"></div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+
+
+<div id="menu-right">
+
+	<div id="canvas-lang-select" tooltip class="menu-right-elem bg-wood-small" style="display:none">
+
+		<div>
+		<select id="lang-select-canvas" class="lang-select" style="height:5vh;max-height:38px" onclick="UI.Lang.select('lang-select-canvas')">
+			<option value="EN">EN</option>
+			<option value="RU">RU</option>
+		</select>
+		</div>
+
+		<div class="btn-2 btn-2-size1 btn-bg1" style="margin-left:1vh">
+			<div class="icon-cancel-x btn-2-size1" onclick="UI.Lang.closeCanvasSelector()"></div>
+		</div>
+	</div>
+
+
+	<div id="vk-add-to-favorites" class="menu-right-elem btn-bg1" style="display:none" onclick="VKUtil.openAddToFavorites()">
+
+		<div class='progress-list-elem-overlay'></div>
+
+		<div style="border:1px solid black;padding:1px 6px 1px 5px;">
+			<div id="vk-add-to-favorites-1"></div>
+			<div>
+				<span id="vk-add-to-favorites-2"></span>
+				<div class="icon-crystals-inline icon-inline-wide1"></div><span>5</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="vk-invite" class="menu-right-elem btn-bg2" style="" onclick="VKUtil.openShowInviteBox()">
+
+		<div class='progress-list-elem-overlay'></div>
+
+		<div style="border:1px solid black;padding:1px 6px 1px 5px;">
+			<div id="vk-invite-msg"></div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<div id="canvas-container">
+
+	<canvas id="canvas-main"></canvas>
+
+	<div id="canvas-msg"></div>
+
+
+<!--
+	<div id="canvas-msg-container">
+
+		<div>
+		<div id="btn-loginRegister">
+
+			<div id="btn-loginRegister-btn" class="btn3d" style="margin:3px 5px 11px 6px">
+			<a href="#" onclick="">
+				<span id="btn-loginRegister-btn1" style="">Login / Register</span>
+			</a>
+			</div>
+
+		</div>
+		</div>
+
+		<div id="canvas-msg"></div>
+	</div>
+-->
+</div> <!-- id="container-canvas" -->
+
+
+
+
+<div id="minimap-container">
+	<!--div id="minimap-err-msg" class="text0" style="display:none">It requires 100px+ to display minimap.</div-->
+	<canvas id="minimap-canvas1a" class="minimap-canvas" style="z-index:2051"></canvas>
+	<canvas id="minimap-canvas1b" class="minimap-canvas" style="z-index:2051"></canvas>
+	<canvas id="minimap-canvas2" class="minimap-canvas" style="z-index:2052"></canvas>
+	<canvas id="minimap-canvas3" class="minimap-canvas" style="z-index:2053"></canvas>
+</div>
+
+
+
+
+<div id="screen-container" style="display:none">
+
+	<div id="screen-dialog-container" style=""></div>
+	<div id="screen-dialog-bg" style="opacity:0;pointer-events:none" onclick="UI.closeDialog()"></div>
+
+	<div id="screen-darken" style="opacity:0;pointer-events:none"></div>
+
+	<div id="screen-margin"></div>
+
+	<div id="robotinfo-main" class="info-main" style="position:relative;display:none"></div>
+	<div id="charinfo-main" class="info-main" style="position:relative;display:none"></div>
+	<!--div id="auth-main" style="display:none"></div-->
+	<div id="basecenterinfo-main" class="info-main" style="display:none"></div>
+	<div id="robocenterinfo-main" class="info-main" style="display:none"></div>
+	<div id="woodintakeinfo-main" class="info-main" style="display:none"></div>
+	<div id="towerinfo-main" class="info-main" style="display:none"></div>
+	<div id="constructionstartinfo-main" class="info-main" style="display:none"></div>
+	<div id="constructionsiteinfo-main" class="info-main" style="display:none"></div>
+	<div id="chaintestinfo-main" class="info-main" style="display:none"></div>
+
+	<div id="equip-main" style="position:relative;display:none"></div>
+	<div id="basecenter-main" style="position:relative;display:none"></div>
+	<div id="shop-main" style="display:none"></div>
+	<div id="robotbuy-main" style="display:none"></div>
+	<div id="charadd-main" style="display:none"></div>
+	<div id="gears-main" style="display:none"></div>
+	<div id="help-main" style="display:none"></div>
+	<div id="constructionselect-main" style="display:none"></div>
+
+</div>
+
+
+<div id="progress-window" class="progress-window-close bg-medium-paper-recycled"></div>
+
+
+<div id="progress-window-small" class="progress-window-small-open bg-small-paper-recycled" onclick="ProgressWindow.clickSmall()"></div>
+
+
+</div> <!-- app-container -->
+
+
+
+</div>
+
+

@@ -1,0 +1,3064 @@
+
+<div>Loaded Successfully</div>
+
+<div>Not for display as .html! loads into div.innerHTML</div>
+<div style="background-color:black;height:2vh;margin:2vh"></div>
+
+
+
+
+
+
+
+
+
+
+<div id="buttons-top-row2" style="display:flex;flex-direction:column">
+
+	<div id="buttons-top-debug" style="display:none;flex-direction:column;pointer-events:auto;background:rgba(80, 0, 0, 0.18);padding:0px;border:3px solid #b00">
+
+		<div style="display:flex">
+
+			<div class="btn-2 btn-2-height0 btn-bg2" id="tMult-0" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(0)">
+				<div class="text0 margin0">x0</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg1" id="tMult-0.05" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(0.05)">
+				<div class="text0 margin0">x0.05</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg1" id="tMult-0.3" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(0.3)">
+				<div class="text0 margin0">x0.3</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg2 highlight" id="tMult-1" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(1)">
+				<div class="text0 margin0">x1</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg3" id="tMult-3" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(3)">
+				<div class="text0 margin0">x3</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg1" id="tMult-10" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(10)">
+				<div class="text0 margin0">x10</div>
+			</div>
+<!--
+			<div class="btn-2 btn-2-height0 btn-bg2" id="tMult-50" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(50)">
+				<div class="text0 margin0">x50</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg2" id="tMult-250" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(250)">
+				<div class="text0 margin0">x250</div>
+			</div>
+-->
+			<div class="btn-2 btn-2-height0 btn-bg2" id="tMult-100" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(100)">
+				<div class="text0 margin0">x100</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg1" id="tMult-1000" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(1000)">
+				<div class="text0 margin0">x1K</div>
+			</div>
+			<div class="btn-2 btn-2-height0 btn-bg3" id="tMult-5000" tooltip="btn-time-factor" onclick="UI.Debug.setTMult(5000)">
+				<div class="text0 margin0">x5K</div>
+			</div>
+
+		</div>
+
+
+		<div style="display:flex;margin-top:5px"> <!-- DEBUG row2 -->
+
+			<div style="display:flex;flex-direction:column">
+				<div id="time-val" class="padding2" style="margin-right:6px;background:black;color:white">0</div>
+			</div>
+
+			<div id="debug-axe" class="btn-2 btn-2-size0 btn-bg2" style="" onclick="UI.Debug.clickAxe()">
+				<div class="icon-axe-in-log btn-2-size0"></div>
+			</div>
+			<div id="debug-logs" class="btn-2 btn-2-size0 btn-bg3" onclick="UI.Debug.clickCollectLogs()">
+				<div class="icon-grab btn-2-size0"></div>
+			</div>
+			<div id="debug-stop" class="btn-2 btn-2-size0 btn-bg2" tooltip="btn-debug-stop" onclick="UI.Debug.clickStop()">
+				<div class="icon-cancel btn-2-size0"></div>
+			</div>
+
+			<div id="debug-delete" style="margin-left:1vh;position:relative;display:flex;flex-direction:column">
+				<div class="btn-2 btn-2-height0 btn-bg1" id="debug-delete-btn" onclick="UI.Debug.clickDelete()">
+					<div class="text0 margin0">Delete</div>
+				</div>
+				<div id="debug-delete-confirm" style="position:relative;display:none">
+					<div style="position:absolute;top:0;left:0;display:flex;background:#ddd;padding:1vh;border:1px solid black;pointer-events:auto">
+
+						<input type="checkbox" id="debug-delete-confirm-chk">
+
+						<div class="btn-2 btn-2-height0 btn-bg1" style="margin-left:1vh" onclick="UI.Debug.clickDeleteConfirm()">
+							<div class="text0 margin0">Confirm&nbsp;Delete&nbsp;User</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<!--
+			<div class="btn-2 btn-2-height0 btn-bg3" style="font-weight:bold" onclick="UI.Debug.clickPlusCrystals()">
+				<div class="text0 margin0">+</div>
+				<div class="icon-crystals-wide btn-2-size-wide0"></div>
+			</div>
+	-->
+			<div id="debug-coins" class="btn-2 btn-2-height0 btn-bg2" style="font-weight:bold" onclick="UI.Debug.clickPlusCoins()">
+				<div class="text0 margin0">+</div>
+				<div class="icon-coins-wide btn-2-size-wide0"></div>
+			</div>
+
+		</div>
+
+	</div> <!-- buttons-top-debug -->
+
+
+
+	<div id="buttons-tower" style="display:flex">
+
+		<div class="bg-medium-paper2" style="display:flex"> <!-- TODO review bg. -->
+
+			<div class="btn-2 btn-2-height0" id="tower-0.03" tooltip onclick="Buttons.clickTower(0.03)">
+				<div class="text1b padding1">x0.03</div>
+			</div>
+
+			<div class="btn-2 btn-2-height0" id="tower-0.2" tooltip onclick="Buttons.clickTower(0.2)">
+				<div class="text1b padding1">x0.2</div>
+			</div>
+
+			<div class="btn-2 btn-2-height0" id="tower-1" tooltip onclick="Buttons.clickTower(1)">
+				<div class="text1b padding1">x1</div>
+			</div>
+
+			<div class="btn-2 btn-2-height0" id="tower-1.25" tooltip onclick="Buttons.clickTower(1.25)">
+				<div class="text1b padding1">x1.25</div>
+			</div>
+
+			<div class="btn-2 btn-2-height0" id="tower-1.5" tooltip onclick="Buttons.clickTower(1.5)">
+				<div class="text1b padding1">x1.5</div>
+			</div>
+
+			<div class="btn-2 btn-2-height0" id="tower-2" tooltip onclick="Buttons.clickTower(2)">
+				<div class="text1b padding1">x2</div>
+			</div>
+
+			<div class="btn-2 btn-2-height0" id="tower-3" tooltip onclick="Buttons.clickTower(3)">
+				<div class="text1b padding1">x3</div>
+			</div>
+
+		</div>
+	</div> <!-- buttons-tower -->
+
+
+</div> <!-- buttons-top-row-2 -->
+
+
+
+
+
+
+
+
+
+<div id="chaintestinfo-main">
+
+	<div style="display:flex">
+		<div style="flex:99">
+
+			<div style="float:right;display:flex;justify-content:center;margin:0 0 0.5vh 1vh">
+				<div class="btn-2 btn-2-size1 btn-bg3" onclick="UI.pressEsc()">
+					<div class="icon-cancel-x btn-2-size1"></div>
+				</div>
+			</div>
+
+			<div id="item-name" class="text2b" style="margin-top:2px"></div>
+
+		</div>
+	</div>
+
+
+	<div style="height:1px;background:black;margin-bottom:0.4vh"></div>
+
+
+	<div style="display:flex;align-items:center">
+		<div class="checkbox">
+			<input type="checkbox" id="chaintest-switch-animDirection" onclick="ScreenChainTestInfo.clickSwitchAnimDirection()">
+			<label for="chaintest-switch-animDirection" id="chaintest-switch-animDirection-msg"></label>
+		</div>
+	</div>
+
+	<div style="display:flex;align-items:center">
+		<div class="checkbox">
+			<input type="checkbox" id="chaintest-switch-rope-0" onclick="ScreenChainTestInfo.clickSwitchRope()">
+			<label for="chaintest-switch-rope-0" id="chaintest-switch-rope-msg"></label>
+		</div>
+	</div>
+
+	<div style="display:flex;align-items:center">
+		<div class="checkbox">
+			<input type="checkbox" id="chaintest-switch-cw-0" onclick="ScreenChainTestInfo.clickSwitchCW()">
+			<label for="chaintest-switch-cw-0" id="chaintest-switch-cw-msg"></label>
+		</div>
+	</div>
+
+
+	<div id="" class="section3-has-overhdr">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div><div id="chaintest-lbp-hdr"></div></div>
+			<div></div>
+		</div>
+
+		<div>
+			<div style="display:flex;align-items:center">
+
+				<div style="width:2vh;height:1vh;background:#a30"></div>
+				<div style="margin:0 0.6vh">X</div>
+
+				<div class="btn-bg3">
+					<div id="btn-x-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlX.pressFaster('-')"
+							onmouseup="ScreenChainTestInfo._ctrlX.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlX.release()">
+						<div class="icon-lr-left2 btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg1">
+					<div id="btn-x-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlX.press('-')"
+							onmouseup="ScreenChainTestInfo._ctrlX.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlX.release()">
+						<div class="icon-lr-left btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div id="x-val" style="font-weight:bold;width:10vh;padding:0 1vh 0 1vh"></div>
+
+				<div class="btn-bg3">
+					<div id="btn-x-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlX.press('+')"
+							onmouseup="ScreenChainTestInfo._ctrlX.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlX.release()">
+						<div class="icon-lr-right btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg2">
+					<div id="btn-x-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlX.pressFaster('+')"
+							onmouseup="ScreenChainTestInfo._ctrlX.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlX.release()">
+						<div class="icon-lr-right2 btn-2-size1"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div style="display:flex;align-items:center">
+
+				<div style="width:2vh;height:1vh;background:#090"></div>
+				<div style="margin:0 0.6vh">Y</div>
+
+				<div class="btn-bg2">
+					<div id="btn-y-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlY.pressFaster('-')"
+							onmouseup="ScreenChainTestInfo._ctrlY.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlY.release()">
+						<div class="icon-lr-left2 btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg1">
+					<div id="btn-y-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlY.press('-')"
+							onmouseup="ScreenChainTestInfo._ctrlY.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlY.release()">
+						<div class="icon-lr-left btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div id="y-val" style="font-weight:bold;width:10vh;padding:0 1vh 0 1vh"></div>
+
+				<div class="btn-bg3">
+					<div id="btn-y-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlY.press('+')"
+							onmouseup="ScreenChainTestInfo._ctrlY.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlY.release()">
+						<div class="icon-lr-right btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg2">
+					<div id="btn-y-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlY.pressFaster('+')"
+							onmouseup="ScreenChainTestInfo._ctrlY.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlY.release()">
+						<div class="icon-lr-right2 btn-2-size1"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div style="display:flex;align-items:center">
+
+				<div style="width:2vh;height:1vh;background:#11a"></div>
+				<div style="margin:0 0.6vh">Z</div>
+
+				<div class="btn-bg1">
+					<div id="btn-z-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlZ.pressFaster('-')"
+							onmouseup="ScreenChainTestInfo._ctrlZ.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlZ.release()">
+						<div class="icon-lr-left2 btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg2">
+					<div id="btn-z-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlZ.press('-')"
+							onmouseup="ScreenChainTestInfo._ctrlZ.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlZ.release()">
+						<div class="icon-lr-left btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div id="z-val" style="font-weight:bold;width:10vh;padding:0 1vh 0 1vh"></div>
+
+				<div class="btn-bg3">
+					<div id="btn-z-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlZ.press('+')"
+							onmouseup="ScreenChainTestInfo._ctrlZ.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlZ.release()">
+						<div class="icon-lr-right btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg2">
+					<div id="btn-z-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlZ.pressFaster('+')"
+							onmouseup="ScreenChainTestInfo._ctrlZ.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlZ.release()">
+						<div class="icon-lr-right2 btn-2-size1"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div> <!-- section3 coord. -->
+
+
+	<div id="section-dL" class="section3-has-overhdr">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div><div id="chaintest-dL-msg" class="text0"></div></div>
+			<div></div>
+		</div>
+
+		<div>
+			<div id="section-dL-angle" style="display:flex;align-items:center">
+				<div style="margin-right:0.5vh">r=</div>
+				<div id="dL-radius" style="margin-right:0.5vh"></div>
+				<div id="units-distance"></div>
+
+				<div style="flex:99"></div>
+
+				<div style="margin-right:0.5vh">&#x03B1;=</div>
+				<div id="dL-angle" style="margin-right:1vh"></div>
+<!--
+				<div>(</div>
+				<div id="dL-angle-fract" style="margin-right:0vh"></div>
+				<div>&#x03C0;)</div>
+-->
+			</div>
+
+			<div style="display:flex;align-items:center">
+
+				<div style="margin:0 0.6vh">dL</div>
+
+				<div class="btn-bg1">
+					<div id="btn-dL-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlDL.pressFaster('-')"
+							onmouseup="ScreenChainTestInfo._ctrlDL.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlDL.release()">
+						<div class="icon-lr-left2 btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg2">
+					<div id="btn-dL-left" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlDL.press('-')"
+							onmouseup="ScreenChainTestInfo._ctrlDL.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlDL.release()">
+						<div class="icon-lr-left btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div id="dL-val" style="font-weight:bold;width:10vh;padding:0 1vh 0 1.5vh"></div>
+
+				<div class="btn-bg3">
+					<div id="btn-dL-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlDL.press('+')"
+							onmouseup="ScreenChainTestInfo._ctrlDL.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlDL.release()">
+						<div class="icon-lr-right btn-2-size1"></div>
+					</div>
+				</div>
+
+				<div class="btn-bg2">
+					<div id="btn-dL-right" class="btn-2 btn-2-size1"
+							onmousedown="ScreenChainTestInfo._ctrlDL.pressFaster('+')"
+							onmouseup="ScreenChainTestInfo._ctrlDL.release()"
+							onmouseleave="ScreenChainTestInfo._ctrlDL.release()">
+						<div class="icon-lr-right2 btn-2-size1"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div> <!-- section3  dL -->
+
+	<div id="chaintest-error-isInside" class="info-section-warn text0"></div>
+
+	<div id="chaintest-error-case2" class="info-section-warn text0"></div>
+
+	<div id="chaintest-error-excessDL" class="info-section-warn text0"></div>
+
+
+	<div style="display:flex;align-items:center;justify-content:space-between">
+
+		<div style="display:flex;align-items:center">
+			<div style="margin:0 0.2vh 0 1vh">&#x03C8;:</div>
+			<div id="psi-val"></div>
+		</div>
+
+		<div id="phi1-block" style="display:flex;align-items:center">
+			<div style="width:2vh;height:1vh;background:#f59920;border:1px solid black"></div>
+			<div style="margin:0 0.2vh">&#x03C6;<sub>1</sub>:</div>
+			<div id="phi1-val"></div>
+		</div>
+
+		<div id="phi-block" style="display:flex;align-items:center;margin-left:0vh">
+			<div style="width:2vh;height:1vh;background:#d10084"></div>
+			<div style="margin:0 0.2vh">&#x03C6;:</div>
+			<div id="phi-val"></div>
+		</div>
+	</div>
+
+<!--div>
+&#x03B0; &#x03B1; &#x03B2; &#x03B3; &#x03B4; &#x03B5; &#x03B6; &#x03B7; &#x03B8; &#x03B9; &#x03BA; &#x03BB; &#x03BC; &#x03BD; &#x03BE; &#x03BF; 
+&#x03C0; &#x03C1; &#x03C2; &#x03C3; &#x03C4; &#x03C5; &#x03C6; &#x03C7; &#x03C8; &#x03C9; &#x03CA; &#x03CB; &#x03CC; &#x03CD; &#x03CE; &#x03CF; 
+</div-->
+
+</div>
+
+
+
+
+
+
+<div id="robocenterinfo-main">
+
+	<div style="display:flex">
+		<div style="flex:99">
+
+			<div style="float:right;display:flex;justify-content:center;margin:0 0 0.5vh 1vh">
+				<div class="btn-2 btn-2-size1 btn-bg3" onclick="UI.pressEsc()">
+					<div class="icon-cancel-x btn-2-size1"></div>
+				</div>
+			</div>
+
+			<div id="item-name" class="text3b" style="margin-top:2px"></div>
+
+		</div>
+	</div>
+
+
+	<div style="height:1px;background:black;margin-bottom:0.4vh"></div>
+
+
+	<div style="display:flex;justify-content:end;margin-top:0.5vh">
+		<div id="btn-show-extra" class="btn-2 btn-2-size-3xwide00 btn-bg2" onclick="ScreenRobocenterInfo.clickExtra()">
+			<div class="icon-dots-3h btn-2-size-3xwide00"></div>
+		</div>
+	</div>
+
+	<div id="show-extra">
+
+		<div style="display:flex;align-items:center">
+
+			<div id="" class='btn-bg1' style='height:1%;display:flex'>
+
+				<div class="btn-2 btn-2-height1 padding1 btn-rc-test" onclick="ScreenRobocenterInfo.clickTest(1)">
+					<div class="text2b margin1">1</div>
+				</div>
+				<div class="btn-2 btn-2-height1 padding1 btn-rc-test" onclick="ScreenRobocenterInfo.clickTest(2)">
+					<div class="text2b margin1">2</div>
+				</div>
+				<div class="btn-2 btn-2-height1 padding1 btn-rc-test" onclick="ScreenRobocenterInfo.clickTest(3)">
+					<div class="text2b margin1">3</div>
+				</div>
+			</div>
+
+			<div id="test-systems-msg" style="margin-left:1.5vh"></div>
+
+			<div style="flex:99"></div>
+
+			<div class="btn-2 btn-2-size1 btn-bg3" onclick="ScreenRobocenterInfo.clickDisassembly()">
+				<div class="icon-demolish btn-2-size1"></div>
+			</div>
+			<div id="disassembly-msg" style="margin-left:1.5vh"></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<div id="towerinfo-main">
+
+	<div style="display:flex">
+		<div style="flex:99">
+
+			<div style="float:right;display:flex;justify-content:center;margin:0 0 0.5vh 1vh">
+				<div class="btn-2 btn-2-size1 btn-bg3" onclick="UI.pressEsc()">
+					<div class="icon-cancel-x btn-2-size1"></div>
+				</div>
+			</div>
+
+			<div id="tower-name" class="text3b" style="margin-top:2px"></div>
+
+		</div>
+	</div>
+
+
+	<div style="height:1px;background:black;margin-bottom:0.4vh"></div>
+
+
+	<div id="upgrade-progress">
+
+		<div id="upgrade-msg-no-function" class="text1b"></div>
+
+		<div style="display:flex;margin-top:0.4vh">
+			<div id="constructionsite-timer-msg" style="margin-right:1vh"></div>
+			<div id="timer-val" style="font-weight:bold"></div>
+		</div>
+
+		<div style="display:flex;width:95%;height:1.2vh;border:1px solid black;background:#080808">
+			<div id="progress-bar" style="height:100%;background:#1a1"></div>
+		</div>
+	</div>
+
+
+	<div id="info">
+
+		<div id="tower-info-level-1-msg"></div>
+		<div id="tower-info-level-2-msg"></div>
+		<div id="tower-info-level-3-msg"></div>
+		<div id="tower-info-level-4-msg"></div>
+	</div>
+
+
+	<div style="display:flex;justify-content:end;margin-top:0.5vh">
+		<div id="btn-show-extra" class="btn-2 btn-2-size-3xwide00 btn-bg2" onclick="ScreenTowerInfo.clickExtra()">
+			<div class="icon-dots-3h btn-2-size-3xwide00"></div>
+		</div>
+	</div>
+
+	<div id="show-extra">
+
+		<div style="display:flex">
+
+			<div id="upgrade-section" style="display:flex;align-items:center;margin-right:3vh">
+				<div class="btn-2 btn-2-size1 btn-bg2" onclick="ScreenTowerInfo.clickUpgrade()">
+					<div class="icon-upgrade btn-2-size1"></div>
+				</div>
+				<div id="upgrade-msg" style="margin-left:1.5vh"></div>
+			</div>
+
+			<div id="" style="display:flex;align-items:center">
+				<div class="btn-2 btn-2-size1 btn-bg3" onclick="ScreenTowerInfo.clickDisassembly()">
+					<div class="icon-demolish btn-2-size1"></div>
+				</div>
+				<div id="disassembly-msg" style="margin-left:1.5vh"></div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<div id="constructionsiteinfo-main">
+
+	<div style="display:flex">
+
+		<div style="flex:99;align-self:center">
+			<span id="item-name" class="text3b"></span>
+		</div>
+
+		<div class="btn-2 btn-2-size2 btn-bg3" style="margin:0.6vh" onclick="ScreenConstructionSiteInfo.pressEsc()">
+			<div class="icon-cancel-x btn-2-size2"></div>
+		</div>
+	</div>
+
+	<div id="constructionsite-hdr-build" class="text1b" style="margin:0"></div>
+
+	<div style="display:flex;margin-top:0.4vh">
+		<div id="constructionsite-timer-msg" style="margin-right:1vh"></div>
+		<div id="constructionsite-timer-val" style="font-weight:bold"></div>
+	</div>
+
+	<div style="display:flex;width:95%;height:1.2vh;border:1px solid black;background:#080808">
+		<div id="progress-bar" style="height:100%;background:#1a1"></div>
+	</div>
+
+</div>
+
+
+
+
+
+<div id="constructionstartinfo-main">
+
+	<div style="display:flex">
+
+		<div style="flex:99;align-self:center">
+			<span id="constructionstart-hdr-1" class="text2b"></span>
+		</div>
+
+		<div class="btn-2 btn-2-size1a btn-bg1" style="margin:0.6vh" onclick="ScreenConstructionStartInfo.pressEsc()">
+			<div class="icon-cancel-x btn-2-size1a"></div>
+		</div>
+	</div>
+<!--
+	<div style="height:1px;background:black;margin-bottom:0.4vh"></div>
+
+	<div id="constructionstart-hdr-3" class="text1b"></div>
+-->
+
+	<div style="display:flex">
+
+		<div id="" class="section3-has-overhdr section3-construction">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id="constructionstart-angle"></div></div>
+				<div></div>
+			</div>
+
+			<div style="display:flex;align-items:center">
+
+				<div class="btn-2 btn-2-size1 btn-bg3"
+						onmousedown="ScreenConstructionStartInfo.btnPress('facing', 'L')"
+						onmouseup="ScreenConstructionStartInfo.btnRelease('facing', 'L')"
+						onmouseleave="ScreenConstructionStartInfo.btnRelease('facing', 'L')">
+					<div class="icon-turn-left btn-2-size1"></div>
+				</div>
+
+				<div class="btn-2 btn-2-size1 btn-bg2"
+						onmousedown="ScreenConstructionStartInfo.btnPress('facing', 'R')"
+						onmouseup="ScreenConstructionStartInfo.btnRelease('facing', 'R')"
+						onmouseleave="ScreenConstructionStartInfo.btnRelease('facing', 'R')">
+					<div class="icon-turn-right btn-2-size1"></div>
+				</div>
+
+				<div id="facing-val" style="font-weight:bold;padding:0 1vh 0 1.5vh"></div>
+				<div id="units-radians"></div>
+
+			</div>
+		</div>
+
+		<div style="flex:99;max-width:5vh"></div>
+
+		<div id="" class="section3-has-overhdr section3-construction">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id="constructionstart-location"></div></div>
+				<div></div>
+			</div>
+
+			<div style="display:flex;align-items:center">
+
+				<div style="font-weight:bold">X:</div>
+				<div id="x-val" style="font-weight:bold;padding:0 1vh"></div>
+				<div style="font-weight:bold;margin-left:2vh">Y:</div>
+				<div id="y-val" style="font-weight:bold;padding:0 1vh"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div style="display:flex;margin-top:0.5vh">
+		<div id="constructionstart-no-money" class="info-section info-section-red">
+			<span id="constructionstart-no-money-msg"></span>
+			<div id="price-coins" class="icon-coins-inline icon-inline-wide1"></div>
+			<div id="price-crystals" class="icon-crystals-inline icon-inline-wide1"></div>
+			<span id="price-val" style="color:#000"></span>
+		</div>
+	</div>
+
+
+	<div style="display:flex;margin-top:0.5vh">
+		<div id="constructionstart-too-far" class="info-section info-section-red">
+			<span id="constructionstart-too-far-msg"></span>
+		</div>
+	</div>
+
+
+	<div style="display:flex;margin-top:0.5vh">
+		<div id="constructionstart-outside" class="info-section info-section-red">
+			<span id="constructionstart-outside-msg"></span>
+		</div>
+	</div>
+
+
+	<div id="constructionstart-intersectData">
+
+		<div id="intersect-wrapper" class="section3-has-overhdr section3-red">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id="constructionstart-intersect-msg"></div></div>
+				<div></div>
+			</div>
+
+			<div>
+				<div id="intersect" style="overflow:hidden"></div>
+			</div>
+		</div>
+
+		<div id="toRemove-wrapper" class="section3-has-overhdr section3-construction">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id="constructionstart-toRemove-msg"></div></div>
+				<div></div>
+			</div>
+
+			<div>
+				<div id="toRemove" style="overflow:hidden"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+
+
+
+
+
+<div id="constructionselect-main">
+
+	<div style="display:flex">
+
+		<div id="constructionselect-hdr" class="text3b" style="flex:99;align-self:center;"></div>
+
+		<div class="btn-2 btn-2-size2 btn-bg2" style="margin:1vh" onclick="ScreenConstructionSelect.pressEsc()">
+			<div class="icon-cancel-x btn-2-size2"></div>
+		</div>
+	</div>
+
+
+	<table style="width:100%;border-collapse:collapse">
+		<tr>
+			<td id="td-0"></td>
+			<td rowspan="99" style="width:1.8%"></td>
+			<td id="td-1"></td>
+			<td rowspan="99" style="width:1.8%"></td>
+			<td id="td-2"></td>
+			<td rowspan="99" style=""></td>
+		</tr>
+		<tr><td colspan="99" style="height:1.5vh"></td></tr>
+		<tr>
+			<td id="td-3"></td>
+			<td id="td-4"></td>
+			<td id="td-5"></td>
+		</tr>
+		<tr><td colspan="99" style="height:1.5vh"></td></tr>
+		<tr>
+			<td id="td-6"></td>
+			<td id="td-7"></td>
+			<td id="td-8"></td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+
+
+<div id="constructionselect-td-elem" style="position:relative">
+
+	<div id="img-anchor"></div>
+
+	<div id="" style="position:absolute;z-index:1;pointer-events:none;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column">
+
+		<div id="item-name" class="text1b" style="text-align:center;padding:0 1px;margin-top:1px"></div>
+
+		<div style="flex:99"></div>
+
+		<div style="display:flex">
+
+			<div style="display:flex;background:rgba(255,255,255,0.4);padding:2px 3px 1px 2px;border:1px solid black;border-radius:0 7px 0 0">
+				<div id="price-coins" class="icon-coins-inline icon-inline-wide1"></div>
+				<div id="price-crystals" class="icon-crystals-inline icon-inline-wide1"></div>
+				<div id="price-val" class="text1">---</div>
+			</div>
+
+			<div style="flex:99"></div>
+
+			<div style="display:flex;background:rgba(255,255,255,0.4);padding:2px 2px 1px 3px;border:1px solid black;border-radius:7px 0 0 0">
+				<div id="minutes-val" class="text1" style="margin-right:0.6vh"></div>
+				<div id="units-minutes" class="text1">---</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+<div id="robotinfo-main">
+
+	<div class="screeninfo-addup bg-small-metal011"></div>
+
+
+	<div style="display:flex">
+		<div style="flex:99">
+
+			<div style="float:right;display:flex;justify-content:center;margin:0 0 0.5vh 1vh">
+				<div class="btn-2 btn-2-size1 btn-bg1" onclick="UI.pressEsc()">
+					<div class="icon-cancel-x btn-2-size1"></div>
+				</div>
+			</div>
+
+			<div id="robot-name" class="text3b" style="margin-top:2px"></div>
+
+		</div>
+	</div>
+
+
+	<div style="height:1px;background:black;margin-bottom:0.4vh"></div>
+
+
+	<div style="display:flex">
+
+		<div class="btn-2 btn-bg2 unit-task-icon" id="arrow-tl" tooltip style="margin-right:5px" onclick="ScreenRobotInfo.clickUnitTaskIcon('arrow-tl')">
+			<div class="icon-arrow-tl btn-2-size1a"></div>
+		</div>
+
+		<div class="btn-2 btn-bg1 btn-2-size0 highlight" style="display:none" id="lock-locked" onclick="ScreenRobotInfo.clickArrowTLLock()">
+			<div class="icon-lock-locked btn-2-size0"></div>
+		</div>
+
+		<div class="btn-2 btn-bg3 btn-2-size0" style="display:none" id="lock-unlocked" tooltip onclick="ScreenRobotInfo.clickArrowTLLock()">
+			<div class="icon-lock-unlocked btn-2-size0"></div>
+		</div>
+
+
+		<div class="btn-2-size-wide1"></div>
+
+		<div style="display:flex">
+
+			<div class="btn-bg1">
+				<div class="btn-2 unit-task-icon" id="unload" tooltip onclick="ScreenRobotInfo.clickUnitTaskIcon('unload')">
+					<div class="icon-robot-unload btn-2-size1a"></div>
+				</div>
+			</div>
+			<div class="btn-bg3" style="margin-right:2vh">
+				<div class="btn-2 unit-task-icon" id="unload-to-storage" tooltip onclick="ScreenRobotInfo.clickUnitTaskIcon('unload-to-storage')">
+					<div class="icon-robot-unload-to-storage-wide btn-2-size-wide1a"></div>
+				</div>
+			</div>
+
+			<div class="btn-bg2">
+				<div class="btn-2 unit-task-icon" id="to-base" tooltip onclick="ScreenRobotInfo.clickUnitTaskIcon('to-base')">
+					<div class="icon-goto-basecenter btn-2-size1a"></div>
+				</div>
+			</div>
+
+			<div class="btn-bg1">
+				<div class="btn-2 unit-task-icon" id="transport" tooltip onclick="ScreenRobotInfo.clickUnitTaskIcon('transport')">
+					<div class="icon-robot-transport-wide btn-2-size-wide1a"></div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div style="flex:50"></div>
+<!--
+		<div class="btn-2 btn-bg3" tooltip="charinfo-equip" onclick="UI.setScreen('Equip')">
+			<div class="icon-char-in btn-2-size1a"></div>
+		</div>
+-->
+
+		<div class="btn-2-size-wide1"></div>
+
+		<div class="btn-2 btn-bg1" id="camera-follow" tooltip onclick="ScreenRobotInfo.clickCameraFollow()">
+			<div class="icon-camera-follow btn-2-size1a"></div>
+		</div>
+
+	</div>
+
+
+	<div id='task-cur' class="section3-has-overhdr section3-robotinfo">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div>
+				<div style="display:flex">
+					<div id="task-cur-overhdr"></div>
+					<div id="task-cur-overhdr-time" style="font-face:bold;color:#001024;margin-left:1vh"></div>
+				</div>
+			</div>
+			<div></div>
+		</div>
+
+		<div style="width:100%">
+
+			<div id='task-cur-stop' class="btn-2-height0" style="float:right;display:flex;margin-bottom:1px;position:relative;top:-3px;left:2px">
+<!--
+				<div class="btn-2 btn-2-size0 btn-bg3" style="margin-right:5px" onclick="">
+					<div class="icon-maximize btn-2-size0"></div>
+				</div>
+ style="display:inline"
+-->
+				<div class="btn-2 btn-2-size0 btn-bg1" tooltip="charinfo-stop-task" onclick="ScreenRobotInfo.clickStopTask()">
+					<div class="icon-cancel btn-2-size0"></div>
+				</div>
+			</div>
+
+
+			<div id='task-transport-flag-not-set'>
+
+				<div id='task-transport-flag-not-set-msg' style="display:inline-block;vertical-align:top">task transport flag not set msg</div>
+
+				<div style="display:inline-block">
+					<div class="btn-bg2">
+						<div class="btn-2 btn-2-size1" id="set-flag" tooltip="robotinfo-set-flag" onclick="ScreenRobotInfo.clickSetFlag()">
+							<div class="icon-robot-set-flag btn-2-size1"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id='task-transport'>
+
+				<div id='' class="btn-2-height0" style="float:right;display:flex;margin-bottom:1px;position:relative;top:-3px;left:2px">
+
+					<div class="btn-2 btn-2-size0 btn-bg3" tooltip="robotinfo-show-flag" style="margin-right:0vh" onclick="ScreenRobotInfo.clickShowFlag()">
+						<div class="icon-robot-show-flag btn-2-size0"></div>
+					</div>
+					<div class="btn-2 btn-2-size0 btn-bg2" id="set-flag" tooltip="robotinfo-set-flag" style="margin-right:1.7vh" onclick="ScreenRobotInfo.clickSetFlag()">
+						<div class="icon-robot-set-flag btn-2-size0"></div>
+					</div>
+				</div>
+
+				<div id='task-transport-descr'></div>
+				<div id='task-transport-status'></div>
+			</div>
+
+<!--
+					<div style="display:inline-block">
+						<div class="btn-bg3">
+							<div class="btn-2 btn-2-size1" id="show-flag" tooltip="robotinfo-show-flag" onclick="ScreenRobotInfo.clickShowFlag()">
+								<div class="icon-robot-show-flag btn-2-size1"></div>
+							</div>
+						</div>
+					</div>
+-->
+
+			<div id='task-cur-status'></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<div id="charinfo-main">
+
+	<div class="screeninfo-addup bg-small-paper4"></div>
+
+
+	<div style="display:flex">
+		<div style="flex:99">
+
+			<div style="float:right;display:flex;justify-content:center;margin:0 0 0.5vh 1vh">
+				<div class="btn-2 btn-2-size1 btn-bg1" onclick="UI.pressEsc()">
+					<div class="icon-cancel-x btn-2-size1"></div>
+				</div>
+			</div>
+
+			<div id="char-name" class="text3b" style="margin-top:2px"></div>
+
+		</div>
+	</div>
+
+
+	<div style="height:1px;background:black;margin-bottom:0.4vh"></div>
+
+
+	<div style="display:flex">
+
+		<div class="btn-2 btn-bg2 unit-task-icon" id="arrow-tl" tooltip style="margin-right:5px" onclick="ScreenCharInfo.clickUnitTaskIcon('arrow-tl')">
+			<div class="icon-arrow-tl btn-2-size1a"></div>
+		</div>
+
+		<div class="btn-2 btn-bg1 btn-2-size0 highlight" style="display:none" id="lock-locked" onclick="ScreenCharInfo.clickArrowTLLock()">
+			<div class="icon-lock-locked btn-2-size0"></div>
+		</div>
+
+		<div class="btn-2 btn-bg3 btn-2-size0" style="display:none" id="lock-unlocked" tooltip onclick="ScreenCharInfo.clickArrowTLLock()">
+			<div class="icon-lock-unlocked btn-2-size0"></div>
+		</div>
+
+
+		<div class="btn-2-size-wide1"></div>
+
+		<div style="display:flex">
+<!--
+			<div class="btn-2 btn-bg3 unit-task-icon" id="move" onclick="ScreenCharInfo.clickUnitTaskIcon('move')">
+				<div class="icon-move btn-2-size1"></div>
+			</div>
+
+			<div class="btn-2 btn-bg3 unit-task-icon" id="grab" onclick="ScreenCharInfo.clickUnitTaskIcon('grab')">
+				<div class="icon-grab btn-2-size1"></div>
+			</div>
+
+			<div class="btn-2 btn-bg3 unit-task-icon" id="axe" onclick="ScreenCharInfo.clickUnitTaskIcon('axe')">
+				<div class="icon-axe-in-log btn-2-size1"></div>
+			</div>
+-->
+			<div class="btn-2 btn-bg1 unit-task-icon" id="drop" tooltip onclick="ScreenCharInfo.clickUnitTaskIcon('drop')">
+				<div class="icon-drop btn-2-size1a"></div>
+			</div>
+
+			<div class="btn-bg3">
+				<div class="btn-2 unit-task-icon" id="piledrop" tooltip onclick="ScreenCharInfo.clickUnitTaskIcon('piledrop')">
+					<div class="icon-piledrop btn-2-size1a"></div>
+				</div>
+			</div>
+
+			<div class="btn-bg2">
+				<div class="btn-2 unit-task-icon" id="goto-basecenter" tooltip onclick="ScreenCharInfo.clickUnitTaskIcon('goto-basecenter')">
+					<div class="icon-goto-basecenter btn-2-size1a"></div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div style="flex:50"></div>
+
+		<div class="btn-2 btn-bg3" tooltip="charinfo-equip" onclick="UI.setScreen('Equip')">
+			<div class="icon-char-in btn-2-size1a"></div>
+		</div>
+
+
+		<div class="btn-2-size-wide1"></div>
+<!--
+		<div class="btn-2 btn-bg1" onclick="">
+			<div class="icon-camera-follow-wide btn-2-size-wide1"></div>
+		</div>
+-->
+		<div class="btn-2 btn-bg1" id="camera-follow" tooltip onclick="ScreenCharInfo.clickCameraFollow()">
+			<div class="icon-camera-follow btn-2-size1a"></div>
+		</div>
+
+	</div>
+
+
+
+	<div id='task-cur' class="section3-has-overhdr section3-green">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div>
+				<div style="display:flex">
+					<div id="task-cur-overhdr"></div>
+					<div id="task-cur-overhdr-time" style="font-face:bold;color:#00270c;margin-left:1vh"></div>
+				</div>
+			</div>
+			<div></div>
+		</div>
+
+		<div style="width:100%">
+
+			<div id='task-cur-stop' class="btn-2-height0" style="float:right;display:flex;margin-bottom:1px;position:relative;top:-3px;left:2px">
+<!--
+				<div class="btn-2 btn-2-size0 btn-bg3" style="margin-right:5px" onclick="">
+					<div class="icon-maximize btn-2-size0"></div>
+				</div>
+-->
+				<div class="btn-2 btn-2-size0 btn-bg1" tooltip="charinfo-stop-task" onclick="ScreenCharInfo.clickStopTask()">
+					<div class="icon-cancel btn-2-size0"></div>
+				</div>
+			</div>
+
+
+			<div id='task-status-cut-wood'>
+
+				<div style="display:flex">
+					<div id='task-status-cut-wood-trees'></div>
+					<div id='trees-val' class="margin2"></div>
+
+					<div style="flex:50;max-width:3vh"></div>
+
+					<div id='task-status-cut-wood-totalMaxHeight'></div>
+					<div id='task-status-cut-wood-totalMaxHeight-short'></div>
+					<div id='totalMaxHeight-val' class="margin2"></div>
+					<div id='task-status-cut-wood-totalMaxHeight-units'></div>
+
+				</div>
+
+				<div id="hits-branches" style="display:flex">
+					<div id='task-status-cut-wood-cntHits'></div>
+					<div id='cntHits-val' class="margin2"></div>
+
+					<div style="flex:50;max-width:3vh"></div>
+
+					<div id='task-status-cut-wood-cntBranches'></div>
+					<div id='cntBranches-val' class="margin2"></div>
+				</div>
+
+				<div style="display:flex">
+					<div id='task-status-cut-wood-cntLogs'></div>
+					<div id='cntLogs-val' class="margin2"></div>
+
+					<div style="flex:50;max-width:3vh"></div>
+
+					<div id='task-status-cut-wood-totalLogMass'></div>
+					<div id='totalLogMass-val' class="margin2"></div>
+					<div id='units-mass'></div>
+				</div>
+
+			</div>
+
+			<div id='task-cur-status'></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+<div id="basecenterinfo-main">
+
+	<div style="display:flex">
+
+		<div id="" style="flex:99;align-self:center">
+			<div id="item-name" class="text3b" style=""></div>
+		</div>
+
+		<div class="btn-2 btn-2-size1 btn-bg2" onclick="ScreenBaseCenterInfo.pressEsc()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+
+
+	<div style="display:flex;align-items:center;margin-top:0.5vh">
+
+		<div class="btn-2 btn-2-size-wide1a btn-bg1" id="btn-buy-sell-wide" onclick="UI.setScreen('Shop')">
+			<div class="icon-buy-sell-wide btn-2-size-wide1a"></div>
+		</div>
+
+		<div class="text2" id="basecenterinfo-buy-sell" style="margin-left:2vh"></div>
+	</div>
+
+	<div style="display:flex;align-items:center;margin-top:0.5vh">
+
+		<div class="btn-2 btn-2-size-wide1a btn-bg2" onclick="UI.setScreen('CharAdd')">
+			<div class="icon-charadd-wide btn-2-size-wide1a"></div>
+		</div>
+
+		<div class="text2" id="basecenterinfo-charadd" style="margin-left:2vh"></div>
+	</div>
+
+	<div style="display:flex;align-items:center;margin-top:0.5vh">
+
+		<div class="btn-2 btn-2-size-wide1a btn-bg2" onclick="UI.setScreen('ConstructionSelect')">
+			<div class="icon-build btn-2-size-wide1a"></div>
+		</div>
+
+		<div class="text2" id="basecenterinfo-construction" style="margin-left:2vh"></div>
+	</div>
+
+</div>
+
+
+
+
+
+<div id="basecenter-main">
+<!--
+	<div class="screen-btn-top-right icon-question-arrow highlight" style="top:9vw" onclick="UI.QuestionArrow.click()"></div>
+-->
+	<div class="screen-btn-x-wrapper">
+		<div class="btn-2 btn-2-size2 btn-bg1">
+			<div class="icon-cancel-x btn-2-size2" onclick="UI.pressEsc()"></div>
+		</div>
+	</div>
+
+
+	<div style="position:absolute;top:5%;width:85%;display:flex;justify-content:center">
+		<span id="hdr-inv-storage-at-base" class="text2b"></span>
+	</div>
+
+	<div id="baseCenter-inv-cellgroup" style="position:absolute;top:13%;left:2%"></div>
+
+
+	<div style="position:absolute;top:53%;width:100%;display:flex;justify-content:center">
+		<span id="hdr-char-inv" class="text2b"></span>
+	</div>
+
+	<div id="char-inv-cellgroup0" style="position:absolute;top:61%;left:2%"></div>
+	<div id="char-inv-cellgroup1" style="position:absolute;top:61%;left:51%"></div>
+
+</div>
+
+
+
+
+<div id="shop-main">
+
+	<div class="screen-btn-x-wrapper">
+		<div class="btn-2 btn-bg2" onclick="ScreenShop.pressEsc()">
+			<div class="icon-cancel-x btn-2-size1b"></div>
+		</div>
+	</div>
+
+	<div style="display:flex;margin-top:0.2vh">
+		<span id="shop-timer-msg1" class=""></span>
+		<div class="shop-timer-val"></div>
+	</div>
+
+	<div id="shop-inform-wrapper" tooltip class="checkbox gears-elem">
+		<input type="checkbox" id="shop-inform" onclick="ScreenShop.clickInform()">
+		<label for="shop-inform" id="shop-inform-msg">Inform</label>
+	</div>
+
+
+	<div id="shop-tabs">
+
+		<div id="shop-tab-hdr0" class="shop-tab-hdr shop-tab-hdr-bg0 shop-tab-hdr-inactive" onclick="ScreenShop.clickTab(0)">
+			<div class="text2b">Топоры 1</div>
+		</div>
+		<div id="shop-tab-hdr1" class="shop-tab-hdr shop-tab-hdr-bg1 shop-tab-hdr-inactive" onclick="ScreenShop.clickTab(1)">
+			<div class="text2b">Топоры 2</div>
+		</div>
+		<div id="shop-tab-hdr2" class="shop-tab-hdr shop-tab-hdr-bg2 shop-tab-hdr-inactive" onclick="ScreenShop.clickTab(2)">
+			<div class="text2b">Топоры 3</div>
+		</div>
+
+	</div>
+
+	<div id="shop-tabs-bottom-line"></div>
+
+	<div id="shop-content-wrapper">
+
+		<div id="shop-tab-content0" class="shop-tab-content shop-tab-content-bg0 bg-tab-fabric066" style="display:none">
+
+			<div id="shop-pos-0-0" style="position:absolute;left:2%;top:12.5%"></div>
+			<div id="shop-pos-0-1" style="position:absolute;left:22%;top:3%"></div>
+			<div id="shop-pos-0-2" style="position:absolute;left:42%;top:12.5%"></div>
+			<div id="shop-pos-0-3" style="position:absolute;left:62%;top:3%"></div>
+			<div id="shop-pos-0-4" style="position:absolute;left:82%;top:12.5%"></div>
+
+			<div id="shop-label-nothing"><span id="shop-msg-nothing" class="text2"></span></div>
+			<div id="shop-label-update"><span id="shop-msg-update" class="text2b"></span></div>
+		</div>
+
+
+		<div id="shop-tab-content1" class="shop-tab-content shop-tab-content-bg1 bg-tab-fabric066" style="display:none">
+
+			<div id="shop-pos-1-0" style="position:absolute;left:2%;top:3%"></div>
+			<div id="shop-pos-1-1" style="position:absolute;left:22%;top:12.5%"></div>
+			<div id="shop-pos-1-2" style="position:absolute;left:42%;top:3%"></div>
+			<div id="shop-pos-1-3" style="position:absolute;left:62%;top:12.5%"></div>
+			<div id="shop-pos-1-4" style="position:absolute;left:82%;top:3%"></div>
+
+			<div id="shop-label-nothing"><span id="shop-msg-nothing" class="text2"></span></div>
+			<div id="shop-label-update"><span id="shop-msg-update" class="text2b"></span></div>
+		</div>
+
+
+		<div id="shop-tab-content2" class="shop-tab-content shop-tab-content-bg2 bg-tab-velvet1" style="display:none">
+
+			<div id="shop-pos-2-0" style="position:absolute;left:2%;top:12.5%"></div>
+			<div id="shop-pos-2-1" style="position:absolute;left:22%;top:3%"></div>
+			<div id="shop-pos-2-2" style="position:absolute;left:42%;top:12.5%"></div>
+			<div id="shop-pos-2-3" style="position:absolute;left:62%;top:3%"></div>
+			<div id="shop-pos-2-4" style="position:absolute;left:82%;top:12.5%"></div>
+
+			<div id="shop-label-nothing"><span id="shop-msg-nothing" class="text2"></span></div>
+			<div id="shop-label-update"><span id="shop-msg-update" class="text2b"></span></div>
+		</div>
+
+	</div>
+
+	<div id="shop-content-bottom-line"></div>
+
+	<div style="position:absolute;top:63.2%;width:100%;display:flex;justify-content:center">
+		<span id="hdr-inv-storage-at-base" class="text2b"></span>
+	</div>
+
+	<div id="shop-baseCenter-inv-cellgroup" style="position:absolute;top:68.4%;left:3%"></div>
+
+</div>
+
+
+
+
+
+
+<div id="shop-price-label" class="shop-price-label">
+
+	<div class="shop-price-label-inner">
+		<div id="price-coins" class="icon-coins-inline icon-inline-wide1"></div>
+		<div id="price-crystals" class="icon-crystals-inline icon-inline-wide1"></div>
+		<span id="price-val"></span>
+	</div>
+</div>
+
+
+
+
+
+
+
+<div id="Shop-dialog-sell" class="screen-dialog bg-screen-wood1a">
+<!--
+	<div class="screen-btn-x-wrapper">
+		<div class="btn-2 btn-bg2" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+-->
+
+	<div style="display:flex">
+
+		<div id="shop-sell-name" class="text2b" style="flex:99;align-self:center;text-align:center">Item Name</div>
+
+		<div class="btn-2 btn-2-size1 btn-bg2" style="margin-left:1vh" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+
+	<div id="shop-no-sell-costCrystals" class="info-section-warn-2" style="margin:1.5vh 0">
+
+		<span id="shop-msg-no-sell-costCrystals-1"></span>
+		<div class="icon-crystals-inline icon-inline-wide1"></div>
+		<span id="shop-msg-no-sell-costCrystals-2"></span>
+		<div id="shop-msg-no-sell-costCrystals-3"></div>
+	</div>
+
+	<div id="shop-no-sell-axesTotal" class="info-section-warn-2" style="margin:1.5vh 0">
+		<span id="shop-msg-no-sell-axesTotal-1"></span>
+		<span id="shop-msg-no-sell-axesTotal-axes" style="font-weight:bold"></span>
+		<span id="shop-msg-no-sell-axesTotal-2"></span>
+		<span id="shop-msg-no-sell-axesTotal-chars" style="font-weight:bold"></span>
+		<span id="shop-msg-no-sell-axesTotal-3"></span>
+	</div>
+
+	<div id="shop-sell-info" class="info-section" style="margin:1.5vh 0"></div>
+
+
+	<div class="btn-row-ok-cancel">
+
+		<div id="btn-sell-wrapper" class="btn-bg2" style="height:1%"> <!-- bg moved up for inactive state -->
+			<div id="btn-sell" class="btn-2 btn-2-height1 padding1" onclick="ScreenShop.onClickSell()">
+				<div id="shop-sell-btn-msg" class="text2b margin1">Sell</div>
+				<div class="icon-coins-wide btn-2-size-wide1 margin1"></div>
+				<div id="price-val" class="text2b margin1"></div>
+			</div>
+		</div>
+
+		<div class="" style="margin-left:2vh">
+			<div class="btn-2 btn-2-height1 btn-bg3 pad1end" onclick="UI.closeDialog()">
+				<div class="icon-cancel-x btn-2-size1 margin1"></div>
+				<div id="btn-msg-cancel" class="text2b margin1">Cancel</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="Shop-dialog-buy" class="screen-dialog" style="border:0">
+
+	<div class="screen-btn-x-wrapper">
+		<div class="btn-2 btn-2-size1 btn-bg3" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+
+	<div id="img-anchor" style="display:flex;justify-content:center;margin:2vh 0 1vh 0"></div>
+
+	<div id="shop-buy-name" class="text2b" style="text-align:center">Item Name</div>
+
+	<div id="shop-buy-noCashAmount" class="info-section-warn"></div>
+
+	<div id="shop-buy-noFreeSpace" class="info-section-warn"></div>
+
+	<div class="btn-row-ok-cancel">
+
+		<div id="" class='btn-bg1' style='height:1%'>
+			<div id="btn-buy" class="btn-2 btn-2-height1 padding1" onclick="ScreenShop.onClickBuy()">
+				<div id="shop-buy-btn-msg" class="text2b margin1">Buy for</div>
+				<div id="price-coins" class="icon-coins-wide btn-2-size-wide1 margin1"></div>
+				<div id="price-crystals" class="icon-crystals-wide btn-2-size-wide1 margin1"></div>
+				<div id="price-val" class="text2b margin1"></div>
+			</div>
+		</div>
+
+		<div class="btn-2 btn-2-height1 btn-bg2 pad1end" style="margin-left:2vh" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1 margin1"></div>
+			<div id="btn-msg-cancel" class="text2b margin1">Cancel</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="Shop-dialog-error" class="screen-dialog bg-screen-metal011">
+
+	<div style="display:flex">
+
+		<div id="shop-error-hdr" class="text2b text-user-select" style="flex:99;align-self:center;text-align:center">Operation Rejected</div>
+
+		<div class="btn-2 btn-2-size1 btn-bg2" style="margin-left:1vh" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+
+
+	<div id="shop-error-msg" class="info-section-warn text-user-select" style="margin:2vh 0"></div>
+
+
+	<div class="btn-row-ok-cancel">
+
+		<div class="btn-2 btn-2-height1 btn-bg3 padding1" style="margin-top:2vh" onclick="UI.closeDialog()">
+			<div id="btn-msg-close" class="text2b margin1">Close</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+<div id="robotbuy-main">
+<!--
+	<div style="display:flex">
+
+		<div id="charadd-hdr" class="text3b" style="flex:99;align-self:center;"></div>
+
+		<div class="btn-2 btn-2-size2 btn-bg3" style="margin:1vh" onclick="ScreenCharAdd.pressEsc()">
+			<div class="icon-cancel-x btn-2-size2"></div>
+		</div>
+	</div>
+
+	<div id='charadd-list' style='display:flex;flex-direction:column'></div>
+
+	<div id='charadd-nobody' style="display:flex;justify-content:center;margin-top:4vh">
+		<div id='charadd-nobody-msg' class="text2" style="display:flex;padding:0.5vh 1.3vh;border:3px solid #c63;border-radius:5px;"></div>
+	</div>
+-->
+</div>
+
+
+
+
+
+<div id="charadd-main">
+
+	<div style="display:flex">
+
+		<div id="charadd-hdr" class="text3b" style="flex:99;align-self:center;"></div>
+
+		<div class="btn-2 btn-2-size2 btn-bg3" style="margin:1vh" onclick="ScreenCharAdd.pressEsc()">
+			<div class="icon-cancel-x btn-2-size2"></div>
+		</div>
+	</div>
+
+	<div id='charadd-list' style='display:flex;flex-direction:column'></div>
+
+	<div id='charadd-nobody' style="display:flex;justify-content:center;margin-top:4vh">
+		<div id='charadd-nobody-msg' class="text2" style="display:flex;padding:0.5vh 1.3vh;border:3px solid #c63;border-radius:5px;"></div>
+	</div>
+</div>
+
+
+
+
+
+<div id="charadd-elem" style="position:relative;padding:1.5vh;margin-right:3vh">
+
+	<div class='progress-list-elem-overlay'></div>
+
+	<div id='char-name' class='text2b'></div>
+	<div id='char-img' style="margin:0.3vh 2vh 0.3vh 0.4vh"></div>
+
+	<div style="display:flex;margin-top:0.4vh">
+		<div id='charadd-elem-msg-expense' style="margin-right:0.6vh"></div>
+		<div id="price-coins" class="icon-coins-inline icon-inline-wide1"></div>
+		<div id="price-crystals" class="icon-crystals-inline icon-inline-wide1"></div>
+		<div id='price-val'></div>
+	</div>
+</div>
+
+
+
+
+<div id="CharAdd-dialog-add" class="screen-dialog bg-screen-fabric037">
+
+	<div class="screen-btn-x-wrapper">
+		<div class="btn-2 btn-2-size1 btn-bg3" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+
+	<div id="img-anchor" style="display:flex;justify-content:center;margin:2vh 0 1vh 0"></div>
+
+	<div id="name" class="text2b" style="text-align:center">Name</div>
+
+	<div id="charadd-dialog-noCashAmount" class="info-section-warn" style="margin-top:1vh"></div>
+<!--
+	<div id="shop-buy-noFreeSpace" class="info-section-warn"></div>
+-->
+	<div class="btn-row-ok-cancel">
+
+		<div id="btn-spend-wrapper" class='btn-bg1' style='height:1%'>
+			<div id="btn-buy" class="btn-2 btn-2-height1 padding1">
+				<div id="charadd-spend-btn-msg" class="text2b margin1">Add for</div>
+				<div id="price-coins" class="icon-coins-wide btn-2-size-wide1 margin1"></div>
+				<div id="price-crystals" class="icon-crystals-wide btn-2-size-wide1 margin1"></div>
+				<div id="price-val" class="text2b margin1"></div>
+			</div>
+		</div>
+
+		<div id="btn-x-msg" class="btn-2 btn-2-height1 btn-bg2 pad1end" style="margin-left:1.5vh" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1 margin1"></div>
+			<div id="btn-msg-cancel" class="text2b margin1">Cancel</div>
+		</div>
+		<div id="btn-x" class="btn-2 btn-2-height1 btn-bg2" style="margin-left:1.5vh" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1 margin1"></div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+<div id="equip-main">
+
+	<div style="display:flex">
+
+		<div id="char-name" class="text3b" style="align-self:center"></div>
+<!--
+		<div class="btn-2 btn-2-size0 btn-bg2" style="align-self:center;margin:0 1.5vh" onclick="ScreenEquip.openRenameDialog()">
+			<div class="icon-pencil btn-2-size0"></div>
+		</div>
+-->
+		<div style="flex:99"></div>
+
+		<div class="btn-2 btn-2-size2 btn-bg1" style="margin:1vh" onclick="ScreenEquip.pressEsc()">
+			<div class="icon-cancel-x btn-2-size2"></div>
+		</div>
+	</div>
+
+
+	<div id="equip-bg"></div>
+
+	<div id="char-img" style="position:absolute;left:20%;top:20.5%;width:15%;height:16.5%;border:2px solid black;border-radius:5px"></div>
+
+	<div id="equip-slot-weapon" class="equip-slot-42 weapon bg-image"></div>
+	<div id="equip-slot-armor" class="equip-slot-22 armor bg-image"></div>
+	<div id="equip-slot-clothes" class="equip-slot-22 clothes bg-image"></div>
+	<div id="equip-slot-neck1" class="equip-slot-11 neck1 bg-image"></div>
+
+	<div id="equip-inv-cellgroup0" style="position:absolute;top:22%;left:52%"></div>
+	<div id="equip-inv-cellgroup1" style="position:absolute;top:60%;left:52%"></div>
+
+	<div style="display:flex;position:absolute;top:85%">
+		<div class="btn-bg2">
+			<div id="btn-throw" class="btn-2 btn-2-height1 pad1end" onclick="ScreenEquip.clickThrow()">
+				<div class="icon-arrow-up btn-2-size1" style="transform:rotate(-115deg)"></div>
+				<div id="equip-btn-throw" class="text2b margin1">Throw</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+<div id="Equip-dialog-rename" class="screen-dialog bg-screen-wood1a">
+
+	<div style="display:flex">
+
+		<div id="rename-hdr" class="text3b" style="color:#700;flex:99;align-self:center;text-align:center">Rename</div>
+
+		<div class="btn-2 btn-2-size1 btn-bg3" style="margin-left:1vh" onclick="UI.closeDialog()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+
+
+	<div id="char-name" class="text2b"></div>
+
+	<div>
+		<form id="" class="">
+			<input id="input-char-rename" type="text" class="text-input text2" oninput="ScreenEquip.onInputRename(event)">
+		</form>
+	</div>
+
+	<div class="btn-row-ok-cancel">
+
+		<div class="btn-2 btn-2-height1 btn-bg2 pad1end" style="margin-top:2vh" onclick="UI.closeDialog()">
+			<div id="" class="text2b margin1">Random</div>
+		</div>
+
+		<div class="btn-2 btn-2-height1 btn-bg2 pad1end" style="margin-top:2vh" onclick="UI.closeDialog()">
+<!--
+			<div class="icon-check-mark btn-2-size1"></div>
+-->
+			<div id="" class="text2b margin1">Rename</div>
+		</div>
+
+		<div class="btn-2 btn-2-height1 btn-bg1 pad1end" style="margin-top:2vh" onclick="UI.closeDialog()">
+			<div class="icon-cancel btn-2-size1"></div>
+			<div id="btn-msg-cancel" class="text2b margin1">Cancel</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="woodintakeinfo-main">
+
+	<div style="display:flex">
+
+		<div id="item-name" class="text3b" style="flex:99;align-self:center"></div>
+
+		<div class="btn-2 btn-2-size1 btn-bg1" style="margin-left:1vh" onclick="ScreenWoodIntakeInfo.pressEsc()">
+			<div class="icon-cancel-x btn-2-size1"></div>
+		</div>
+	</div>
+
+
+	<div id="woodintake-summary">
+		<div style="display:flex;margin-top:0.4vh">
+
+			<div id="woodintake-summary-count"></div>
+			<div id="woodintake-summary-count-val" class="margin2"></div>
+
+			<div style="flex:50;max-width:4vh"></div>
+
+			<div id="woodintake-summary-volume"></div>
+			<div id="woodintake-summary-volume-val" class="margin2"></div>
+			<div id="units-volume"></div>
+			<div><sup style="line-height:0;font-size:13px">3</sup></div>
+
+			<div style="flex:50;max-width:4vh"></div>
+
+			<div id="woodintake-summary-mass"></div>
+			<div id="woodintake-summary-mass-val" class="margin2"></div>
+			<div id="units-mass"></div>
+
+		</div>
+	</div>
+
+
+	<div id="woodintake-allow-switch-1-div" style="display:flex;align-items:center">
+		<div class="checkbox">
+			<input type="checkbox" id="woodintake-allow-switch-0" onclick="ScreenWoodIntakeInfo.clickAllowSwitch(0)">
+			<label for="woodintake-allow-switch-0" id="woodintake-allow-switch-1-msg"></label>
+		</div>
+	</div>
+
+	<div id="woodintake-allow-switch-n-div" class="section3-has-overhdr" style="margin:1.2vh 0 0 0.35vh">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div><div id="woodintake-allow-switch-n-msg" class="text0"></div></div>
+			<div></div>
+		</div>
+
+		<div style="display:flex;align-items:center">
+
+			<div class="checkbox" style="margin-right:3vh">
+				<input type="checkbox" id="woodintake-allow-switch-n-0" onclick="ScreenWoodIntakeInfo.clickAllowSwitch(0)">
+				<label for="woodintake-allow-switch-n-0">1</label>
+			</div>
+			<div class="checkbox" style="margin-right:3vh">
+				<input type="checkbox" id="woodintake-allow-switch-n-1" onclick="ScreenWoodIntakeInfo.clickAllowSwitch(1)">
+				<label for="woodintake-allow-switch-n-1">2</label>
+			</div>
+			<div class="checkbox" style="margin-right:3vh">
+				<input type="checkbox" id="woodintake-allow-switch-n-2" onclick="ScreenWoodIntakeInfo.clickAllowSwitch(2)">
+				<label for="woodintake-allow-switch-n-2">3</label>
+			</div>
+			<div class="checkbox" style="margin-right:3vh">
+				<input type="checkbox" id="woodintake-allow-switch-n-3" onclick="ScreenWoodIntakeInfo.clickAllowSwitch(3)">
+				<label for="woodintake-allow-switch-n-3">4</label>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div id="woodintake-section-sell" class="section3-has-overhdr" style="margin-top:1.5vh">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div><div id="woodintake-sell-hdr"></div></div>
+			<div></div>
+		</div>
+
+		<div>
+
+			<div style="display:flex">
+				<div id="woodintake-sell-price-1m3"></div>
+				<div class="margin2">1</div>
+				<div id="units-volume"></div>
+				<div><sup>3</sup></div>
+				<div>:</div>
+
+				<div id="woodintake-sell-price-1m3-val" class="margin2"></div>
+				<div id="coins"></div>
+			</div>
+
+			<div>
+				<span id="woodintake-summary-minAmount"></span><span id="woodintake-summary-minAmount-val" class="margin2"></span><span id="units-volume"></span><span><sup>3</sup></span>
+
+				<span id="woodintake-summary-minAmount-percent">(<span id="woodintake-summary-minAmount-percent-msg"></span>
+					<span id="woodintake-summary-minAmount-percent-val"></span>%)</span>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div id="woodintake-сanSell" style="display:flex;align-items:center;margin:1vh 0 0 0">
+
+		<div class='btn-bg3' style='height:1%;display:flex'>
+			<div id="btn-sell" class="btn-2 btn-2-size-wide1">
+				<div class="icon-sell-wood-wide btn-2-size-wide1" onclick="ScreenWoodIntakeInfo.clickSell()"></div>
+			</div>
+		</div>
+		<div>
+			<span id="woodintake-sell" class="text2" style="margin-left:1.5vh"></span>
+			<div class="icon-coins-inline icon-inline-wide1"></div>
+			<span id="woodintake-sell-price-val"></span>
+		</div>
+	</div>
+
+
+	<div id="woodintake-selling-going" style="display:flex;align-items:center;margin:1vh 0 0 0">
+
+		<div id="woodintake-selling-going-msg"></div>
+		<div id="woodintake-selling-going-sign"></div>
+	</div>
+
+	<div id="woodintake-testing-going" style="display:flex;align-items:center;margin:1vh 0 0 0">
+
+		<div id="woodintake-testing-going-msg"></div>
+		<div id="woodintake-selling-going-sign"></div>
+	</div>
+
+	<div id="woodintake-selling-complete" style="display:flex;align-items:center;margin:1vh 0 0 0">
+	</div>
+
+<!--
+	<div style="height:1px;background:black;margin-bottom:0.4vh"></div>
+-->
+
+	<div style="display:flex;justify-content:end;margin-top:0.5vh">
+		<div id="btn-show-extra" class="btn-2 btn-2-size-3xwide00 btn-bg1" onclick="ScreenWoodIntakeInfo.clickExtra()">
+			<div class="icon-dots-3h btn-2-size-3xwide00"></div>
+		</div>
+	</div>
+
+
+	<div id="show-extra">
+
+		<div style="display:flex;align-items:center">
+
+			<div class='btn-bg1' style='height:1%;display:flex'>
+				<div class="btn-2 btn-2-height1 padding1 btn-woodintake-test" onclick="ScreenWoodIntakeInfo.clickTest(1)">
+					<div class="text2b margin1">1</div>
+				</div>
+			</div>
+
+			<div id="test-systems-msg" style="margin-left:1.5vh"></div>
+
+			<div style="flex:99"></div>
+
+			<div class="btn-2 btn-2-size1 btn-bg3" onclick="ScreenWoodIntakeInfo.clickDisassembly()">
+				<div class="icon-demolish btn-2-size1"></div>
+			</div>
+			<div id="disassembly-msg" style="margin-left:1.5vh"></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+<div id="gears-main">
+
+	<div class="screen-btn-x-wrapper">
+		<div class="btn-2 btn-2-size2 btn-bg3">
+			<div class="icon-cancel-x btn-2-size2" onclick="ScreenGears.pressEsc()"></div>
+		</div>
+	</div>
+
+<!-- Preferences (not performance-related) -->
+
+	<div id="gears-server" class="section3-has-overhdr" style="margin:3vh 10vh 2vh 0;background-color:rgba(255,130,0,0.06)">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div><div id='gears-server-hdr'></div></div>
+			<div></div>
+		</div>
+
+		<div class="section3-content" style="width:100%">
+
+			<div id="gears-server-present" style="display:none">
+
+				<div id="gears-server-last-saved" style="display:flex">
+					<div id="gears-server-last-saved-msg-1"></div>
+					<div id="gears-server-last-saved-val" class="shop-timer-val"></div>
+					<div id="gears-server-last-saved-msg-2"></div>
+				</div>
+
+				<div id="gears-server-pending" style="display:flex;color:#400"></div>
+
+				<div style="display:flex;justify-content:center">
+					<div id="" class='btn-bg1' style="height:1%;display:flex;margin:1px 0">
+						<div id="gears-server-save-btn" class="btn-2 btn-2-height1 padding1" onclick="ScreenGears.clickServerSave()">
+							<div id="gears-server-save-btn-msg" class="text2b margin1">Save</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="gears-server-not-present" class="text0"></div>
+
+		</div>
+	</div>
+
+
+	<div class="gears-elem" style="display:flex;align-items:flex-end;margin-bottom:1.2vh">
+		<div>
+		<select id="lang-select-gears" class="lang-select" style="margin-right:5px" onclick="UI.Lang.select('lang-select-gears')">
+			<option value="EN">EN</option>
+			<option value="RU">RU</option>
+		</select>
+		</div>
+		<div id="gears-lang-select">Select Language</div>
+	</div>
+
+<!--
+	<div class="checkbox gears-elem">
+		<input type="checkbox" id="prefs-stats2" onclick="ScreenGears.click('stats2')">
+		<label for="prefs-stats2">Stats 2</label>
+	</div>
+-->
+
+	<div class="checkbox gears-elem">
+		<input type="checkbox" id="prefs-brightness" onclick="ScreenGears.click('brightness')">
+		<label for="prefs-brightness" id="gears-brightness">Increase brightness</label>
+	</div>
+
+	<div class="checkbox gears-elem">
+		<input type="checkbox" id="prefs-arrows" onclick="ScreenGears.click('arrows')">
+		<label for="prefs-arrows" id="gears-arrows">Show Arrows and +/- on Screen</label>
+	</div>
+
+<!--
+		<div class="gears-radioblk-container gears-elem" style="background-color:rgba(0, 0, 0, 0.07);">
+
+			<div class="gears-radioblk-header">
+				Faction Color
+			</div>
+
+			<div class="gears-radioblk-body">
+
+				<div class="gears-radioblk-elem">
+					<div class="checkbox">
+						<input type="radio" id="prefs-color-1" name="prefs-color" onclick="ScreenGears.click('color',1)" checked>
+						<label for="prefs-color-1"><div class="gears-faction-color" style="background-color:#a78050"></div></label>
+					</div>
+				</div>
+
+				<div class="gears-radioblk-elem">
+					<div class="checkbox">
+						<input type="radio" id="prefs-color-2" name="prefs-color" onclick="ScreenGears.click('color',2)">
+						<label for="prefs-color-2"><div class="gears-faction-color" style="background-color:#70c0b0"></div></label>
+					</div>
+				</div>
+
+				<div class="gears-radioblk-elem">
+					<div class="checkbox">
+						<input type="radio" id="prefs-color-3" name="prefs-color" onclick="ScreenGears.click('color',3)">
+						<label for="prefs-color-3"><div class="gears-faction-color" style="background-color:#d0c76a"></div></label>
+					</div>
+				</div>
+
+				<div class="gears-radioblk-elem">
+					<div class="checkbox">
+						<input type="radio" id="prefs-color-4" name="prefs-color" onclick="ScreenGears.click('color',4)">
+						<label for="prefs-color-4"><div class="gears-faction-color" style="background-color:#9280b0"></div></label>
+					</div>
+				</div>
+
+				<div class="gears-radioblk-elem">
+					<div class="checkbox">
+						<input type="radio" id="prefs-color-5" name="prefs-color" onclick="ScreenGears.click('color',5)">
+						<label for="prefs-color-5"><div class="gears-faction-color" style="background-color:#f4a460"></div></label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+-->
+
+
+<!-- Performance -->
+<!--
+	<p class="text2b" style="text-align:center">Performance Options</p>
+-->
+
+	<div class="gears-radioblk-container gears-elem" style="background-color:rgba(255, 0, 0, 0.07);">
+
+		<div class="gears-radioblk-header" style="display:flex;align-items:center">
+			<div id="gears-fps-hdr" style="flex:99;text-align:center">Frame Rate</div>
+			<div class="checkbox gears-elem">
+				<input type="checkbox" id="prefs-stats" onclick="ScreenGears.click('stats')">
+				<label for="prefs-stats" id="gears-prefs-stats" class="text0">Show Frames-Per-Second</label>
+			</div>
+		</div>
+
+		<div class="gears-radioblk-body">
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-fps-1" name="prefs-fps" onclick="ScreenGears.click('fps',1)" checked>
+					<label for="prefs-fps-1">25&nbsp;fps</label>
+				</div>
+			</div>
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-fps-2" name="prefs-fps" onclick="ScreenGears.click('fps',2)">
+					<label for="prefs-fps-2">30&nbsp;fps</label>
+				</div>
+			</div>
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-fps-3" name="prefs-fps" onclick="ScreenGears.click('fps',3)">
+					<label for="prefs-fps-3">40&nbsp;fps</label>
+				</div>
+			</div>
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-fps-4" name="prefs-fps" onclick="ScreenGears.click('fps',4)">
+					<label for="prefs-fps-4">60&nbsp;fps</label>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="gears-radioblk-container gears-elem" style="background-color:rgba(0, 0, 255, 0.08);">
+
+		<div class="gears-radioblk-header" id="gears-visDistance-hdr">
+			Visibility Distance
+		</div>
+
+		<div class="gears-radioblk-body">
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-visDistance-1" name="prefs-visDistance" onclick="ScreenGears.click('visDistance',1)" checked>
+					<label for="prefs-visDistance-1">200m</label>
+				</div>
+			</div>
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-visDistance-2" name="prefs-visDistance" onclick="ScreenGears.click('visDistance',2)">
+					<label for="prefs-visDistance-2">300m</label>
+				</div>
+			</div>
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-visDistance-3" name="prefs-visDistance" onclick="ScreenGears.click('visDistance',3)">
+					<label for="prefs-visDistance-3">400m</label>
+				</div>
+			</div>
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-visDistance-4" name="prefs-visDistance" onclick="ScreenGears.click('visDistance',4)">
+					<label for="prefs-visDistance-4">500m</label>
+				</div>
+			</div>
+
+		</div> <!-- radioblk-body -->
+	</div>
+
+
+	<div class="gears-radioblk-container gears-elem" style="background-color:rgba(0, 255, 80, 0.06);">
+
+		<div class="gears-radioblk-header">
+			Anti-aliasing
+		</div>
+
+		<div class="gears-radioblk-body">
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-aa-1" name="prefs-aa" onclick="ScreenGears.click('aa',1)" checked>
+					<label for="prefs-aa-1">None</label>
+				</div>
+			</div>
+
+			<div class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-aa-2" name="prefs-aa" onclick="ScreenGears.click('aa',2)">
+					<label for="prefs-aa-2">FXAA</label>
+				</div>
+			</div>
+
+			<div id="gears-msaa-4" class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-aa-3" name="prefs-aa" onclick="ScreenGears.click('aa',3)">
+					<label for="prefs-aa-3">MSAA&nbsp;x4</label>
+				</div>
+			</div>
+
+			<div id="gears-msaa-max" class="gears-radioblk-elem">
+				<div class="checkbox">
+					<input type="radio" id="prefs-aa-4" name="prefs-aa" onclick="ScreenGears.click('aa',4)">
+					<label id="gears-msaa-max-msg" for="prefs-aa-4">MSAA(max)</label>
+				</div>
+			</div>
+
+		</div> <!-- radioblk-body -->
+	</div>
+
+
+	<div class="checkbox gears-elem">
+		<input type="checkbox" id="prefs-csm" onclick="ScreenGears.click('csm')">
+		<label for="prefs-csm" id="gears-csm">Compute Shadows</label>
+	</div>
+
+
+	<div class="checkbox gears-elem">
+		<input type="checkbox" id="prefs-materialConf" onclick="ScreenGears.click('materialConf')">
+		<label for="prefs-materialConf" id="gears-materialConf">Use Improved Materials</label>
+	</div>
+
+<!--
+	<div class="checkbox gears-elem">
+		<input type="checkbox" id="prefs-showGrid" onclick="ScreenGears.click('showGrid')">
+		<label for="prefs-showGrid" id="gears-showGrid">Show Grid</label>
+	</div>
+-->
+
+	<div id="" class="section3-has-overhdr" style="background-color:rgba(200,0,255,0.07)">
+
+		<div class="section3-overhdr">
+			<div></div>
+			<div><div id='gears-polygonOp-hdr'></div></div>
+			<div></div>
+		</div>
+
+		<div class="section3-content" style="width:100%">
+<!--
+			<div id="gears-polygonOp-msg" style="margin-bottom:0.5vh"></div>
+
+			<div style="display:flex;flex-direction:column">
+
+				<div class="gears-radioblk-elem">
+					<div class="checkbox">
+						<input type="radio" id="prefs-polygonOp-1" name="prefs-polygonOp" onclick="ScreenGears.click('polygonOp',1)">
+						<label for="prefs-polygonOp-1" id="gears-polygonOp-1"></label>
+					</div>
+				</div>
+
+				<div class="gears-radioblk-elem">
+					<div class="checkbox">
+						<input type="radio" id="prefs-polygonOp-2" name="prefs-polygonOp" onclick="ScreenGears.click('polygonOp',2)">
+						<label for="prefs-polygonOp-2" id="gears-polygonOp-2"></label>
+					</div>
+				</div>
+
+			</div>
+-->
+			<div class="checkbox gears-elem">
+				<input type="checkbox" id="prefs-polygonUnionShow" onclick="ScreenGears.click('polygonUnionShow')">
+				<label for="prefs-polygonUnionShow" id="gears-polygonUnionShow">polygonUnionShow</label>
+			</div>
+
+			<div class="checkbox gears-elem">
+				<input type="checkbox" id="prefs-polygonShow" onclick="ScreenGears.click('polygonShow')">
+				<label for="prefs-polygonShow" id="gears-polygonShow">polygonShow</label>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="checkbox gears-elem" style="margin-top:0.5vh">
+		<input type="checkbox" id="prefs-showPolyhedra" onclick="ScreenGears.click('showPolyhedra')">
+		<label for="prefs-showPolyhedra" id="gears-showPolyhedra">Show Bounding Polyhedra</label>
+	</div>
+
+
+<!-- DEBUG --->
+
+	<div id="gears-debug" style="display:none;flex-direction:column">
+
+		<div id="" class="section3-has-overhdr" style="margin:3vh 1vh 0 0;background-color:rgba(0,0,0,0.07)">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id='gears-debug-hdr'></div></div>
+				<div></div>
+			</div>
+
+			<div class="section3-content" style="width:100%">
+
+				<div class="checkbox gears-elem">
+					<input type="checkbox" id="prefs-ss" onclick="ScreenGears.click('ss')">
+					<label for="prefs-ss" id="gears-ss">Supersampling x4</label>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<div style="display:flex;margin-top:1.5vh">
+
+		<div style="flex:99;display:flex;justify-content:center">
+
+			<div id="" class='btn-bg3' style="height:1%;display:flex">
+				<div id="" class="btn-2 btn-2-height1 padding1" onclick="UIPrefs.resetAllPrefs()">
+					<div id="gears-reset-settings-btn-msg" class="text2b margin1">Reset Settings</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="" class='btn-bg2' style="height:1%;display:flex;margin-right:1vh">
+			<div id="" class="btn-2 btn-2-height1 padding1" onclick="ScreenGears.clickExtraSettings()">
+				<div id="" class="text2b margin1">...</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="help-main">
+
+	<div class="screen-btn-x-wrapper">
+		<div class="btn-2 btn-2-size2 btn-bg1">
+			<div class="icon-cancel-x btn-2-size2" onclick="ScreenHelp.pressEsc()"></div>
+		</div>
+	</div>
+
+
+	<div id="help-kbd-controls-hdr" class="text3b" style="margin-top:1vh"></div>
+
+	<div style="height:2vh"></div>
+
+
+	<div style="display:flex;align-items:center">
+
+		<div style="display:flex;flex-direction:column">
+
+			<div style="display:flex;justify-content:center;margin-bottom:0.5vh">
+				<div class="icon-flex btn-2-size0"><div class="icon-arrow-up btn-2-size0"></div></div>
+			</div>
+
+			<div style="display:flex">
+				<div class="icon-flex btn-2-size0"><div class="icon-arrow-up btn-2-size0" style="transform:rotate(-90deg)"></div></div>
+				<div style="margin:0 0.5vh" class="icon-flex btn-2-size0"><div class="icon-arrow-up btn-2-size0" style="transform:rotate(180deg)"></div></div>
+				<div class="icon-flex btn-2-size0"><div class="icon-arrow-up btn-2-size0" style="transform:rotate(90deg)"></div></div>
+			</div>
+		</div>
+
+		<div style="width:12px"></div>
+
+		<div id="help-arrows"></div>
+
+		<div style="width:10vh"></div>
+	</div>
+
+	<div style="height:2vh"></div>
+
+
+	<div style="display:flex;align-items:center">
+
+		<div class="icon-key-inline btn-2-size0" style="position:relative">
+			<div style="position:relative;top:-5px;">~</div>
+			<div style="position:absolute;top:50%;left:30%">`</div>
+		</div>
+
+		<div id="help-or" style="margin:0 1vh"></div>
+
+		<div class="icon-text-inline btn-2-height0">Esc</div>
+
+		<div style="width:12px"></div>
+
+		<div id="help-esc"></div>
+	</div>
+
+	<div style="height:2vh"></div>
+
+
+	<div style="display:flex;align-items:center">
+
+		<div class="icon-key-inline btn-2-size0">+</div>
+		<div style="display:inline;margin:0 1vh 0 0.5vh">,</div>
+		<div class="icon-key-inline btn-2-size0">-</div>
+
+		<div style="width:12px"></div>
+
+		<div id="help-plus-minus"></div>
+	</div>
+
+
+	<div style="height:2vh"></div>
+
+	<div style="display:flex;align-items:center">
+
+		<div class="icon-text-inline btn-2-height0">Tab</div>
+
+		<div style="width:12px"></div>
+
+		<div id="help-tab"></div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="progress-window">
+
+	<div style="display:flex">
+		<div style="flex:99">
+
+			<div class="bg-img-advisor char-img-smaller0" style="float:left;margin:0 2vh 1vh 0;"></div>
+
+			<div id="btn-minimize" style="float:right;display:flex;margin:0 0 0.5vh 1vh">
+				<div class="btn-2 btn-2-size1 btn-bg1" onclick="ProgressWindow.close()">
+					<div class="icon-minimize btn-2-size1"></div>
+				</div>
+			</div>
+
+			<div id="progress-DEMO2_CLICK_NEXT_CHAR-hdr" class="progress-hdr">
+				<div id="progress-DEMO2_CLICK_NEXT_CHAR-hdr-1" class="progress-hdr-1 text3b">Header</div>
+				<span id="progress-DEMO2_CLICK_NEXT_CHAR-hdr-2" class="text2"></span>
+			</div>
+
+			<div id="progress-DEMO2_CAMERA_FOLLOW-hdr" class="progress-hdr">
+				<div id="progress-DEMO2_CAMERA_FOLLOW-hdr-1" class="progress-hdr-1 text3b">Header</div>
+				<span id="progress-DEMO2_CAMERA_FOLLOW-hdr-2" class="text2"></span>
+			</div>
+
+			<div id="progress-DEMO2_SUMMARY-hdr" class="progress-hdr">
+				<div id="progress-DEMO2_SUMMARY-hdr-1" class="progress-hdr-1 text3b">Header</div>
+				<span id="progress-DEMO2_SUMMARY-hdr-2" class="text2"></span>
+			</div>
+
+
+			<!-- ---------------------------------------------- -->
+
+			<div id="progress-START-hdr" class="progress-hdr">
+				<div id="progress-START-hdr-1" class="progress-hdr-1 text3b">Header</div>
+				<span id="progress-START-hdr-2" class="text2"></span>
+				<div class="icon-coins-inline icon-inline-wide2"></div>
+				<span id="progress-START-hdr-3" class="progress-hdr-2 text2"></span>
+			</div>
+
+			<div id="progress-GET_AXE1-hdr" class="progress-hdr">
+				<div id="progress-GET_AXE1-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-GET_AXE1-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-START_WOODCUTTING1-hdr" class="progress-hdr">
+				<div id="progress-START_WOODCUTTING1-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-START_WOODCUTTING1-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-GET_AXE2-hdr" class="progress-hdr">
+				<div id="progress-GET_AXE2-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-GET_AXE2-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-START_WOODCUTTING2-hdr" class="progress-hdr">
+				<div id="progress-START_WOODCUTTING2-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-START_WOODCUTTING2-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-BUY_AXE-hdr" class="progress-hdr">
+				<div id="progress-BUY_AXE-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-BUY_AXE-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-START_WOODCUTTING_ALL-hdr" class="progress-hdr">
+				<div id="progress-START_WOODCUTTING_ALL-hdr-1" class="progress-hdr-1 text3b"></div>
+				<span id="progress-START_WOODCUTTING_ALL-hdr-2" class="text2"></span>
+				<div class="icon-coins-inline icon-inline-wide2"></div>
+				<span id="progress-START_WOODCUTTING_ALL-hdr-3" class="progress-hdr-2 text2"></span>
+			</div>
+
+			<div id="progress-GATHER_MIN_AMOUNT-hdr" class="progress-hdr">
+				<div id="progress-GATHER_MIN_AMOUNT-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-GATHER_MIN_AMOUNT-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-SELL_WOOD_MIN_AMOUNT-hdr" class="progress-hdr">
+				<div id="progress-SELL_WOOD_MIN_AMOUNT-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-SELL_WOOD_MIN_AMOUNT-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+<!--
+			<div id="progress-GATHER_FOR_LEVEL1-hdr" class="progress-hdr">
+				<div class="bg-img-level level-outer" style="float:left;margin:0 1.5vh 1vh 0;filter:grayscale(90%)">
+					<div class="level-inner">1</div>
+				</div>
+				<div id="progress-GATHER_FOR_LEVEL1-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-GATHER_FOR_LEVEL1-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+-->
+			<div id="progress-CHAR_ADD-hdr" class="progress-hdr">
+				<div id="progress-CHAR_ADD-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-CHAR_ADD-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-SHOP_UPDATE-hdr" class="progress-hdr">
+				<div id="progress-SHOP_UPDATE-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-SHOP_UPDATE-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+			<div id="progress-SUMMARY-hdr" class="progress-hdr">
+				<div id="progress-SUMMARY-hdr-1" class="progress-hdr-1 text3b"></div>
+				<div id="progress-SUMMARY-hdr-2" class="progress-hdr-2 text2"></div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div style="height:0.2vh"></div>
+
+
+	<div id="progress-DEMO2_CLICK_NEXT_CHAR-msg" class="progress-msg">
+
+		<div style="margin-top:0vh">
+			<span id="progress-DEMO2_CLICK_NEXT_CHAR-msg-1"></span>
+			<div class="icon-inline"><div class="icon-char-next btn-2-size1"></div></div>
+			<span id="progress-DEMO2_CLICK_NEXT_CHAR-msg-2"></span>
+		</div>
+
+	</div>
+
+
+	<div id="progress-DEMO2_CAMERA_FOLLOW-msg" class="progress-msg">
+
+		<div style="margin-top:0vh">
+			<span id="progress-DEMO2_CAMERA_FOLLOW-msg-1"></span>
+			<div class="icon-inline"><div class="icon-camera-follow btn-2-size1"></div></div>
+			<span id="progress-DEMO2_CAMERA_FOLLOW-msg-2"></span>
+		</div>
+
+	</div>
+
+
+	<div id="progress-DEMO2_SUMMARY-msg" class="progress-msg">
+
+		<div style="">
+			<span id="progress-DEMO2_SUMMARY-msg-1"></span>
+			<span id="progress-DEMO2_SUMMARY-msg-1-val"></span>
+			<span> / </span>
+			<span id="progress-DEMO2_SUMMARY-msg-1-val2"></span>
+		</div>
+
+		<div style="margin-top:0.7vh">
+			<span id="progress-DEMO2_SUMMARY-msg-time"></span><span id="progress-DEMO2_SUMMARY-time-val"></span>
+		</div>
+
+		<div id='tip' class="section3-has-overhdr" style="margin-top:3vh;background-color:rgba(100,50,70,0.07)">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id='progress-tip-hdr'></div></div>
+				<div></div>
+			</div>
+
+			<div class="section3-content" style="width:100%">
+
+				<div class="bg-img-light-bulb" style=""></div>
+
+				<div style="float:right;display:flex;margin:0 0 1vh 1.5vh">
+					<div class="btn-2 btn-2-size0 btn-bg1" onclick="ProgressWindow.clickNextTip(true)">
+						<div class="icon-triangle-left btn-2-size0" style="transform:scale(-1, 1)"></div>
+					</div>
+					<div class="btn-2 btn-2-size0 btn-bg1" onclick="ProgressWindow.clickNextTip()">
+						<div class="icon-triangle-left btn-2-size0"></div>
+					</div>
+				</div>
+
+				<div id="progress-tip-msg-CLICK_HOME">
+					<span id="progress-tip-msg-CLICK_HOME-1"></span>
+					<div class="icon-inline"><div class="icon-house btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_HOME-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0" style="margin-top:0.7vh">Home</div> <!-- 0.7 vh moved to style -->
+					<span id="progress-tip-msg-CLICK_HOME-3"></span>
+				</div>
+
+				<div id="progress-tip-msg-CLICK_ZOOM">
+					<span id="progress-tip-msg-CLICK_ZOOM-1"></span>
+					<div class="icon-inline"><div class="icon-zoom-in btn-2-size1"></div></div>
+					<div class="icon-inline"><div class="icon-zoom-out btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_ZOOM-2"></span>
+					<div class="icon-key-inline btn-2-size0" style="margin-top:0.7vh">+</div>
+					<div style="display:inline;margin:0 0.4vh">,</div>
+					<div class="icon-key-inline btn-2-size0" style="margin-top:0.7vh">-</div>
+					<span id="progress-tip-msg-CLICK_ZOOM-3"></span>
+				</div>
+<!--
+				<div id="progress-tip-msg-DEMO2">
+					<span id="progress-tip-msg-DEMO2-1"></span>
+					<div class="icon-inline"><div class="icon-gears btn-2-size1"></div></div>
+					<span id="progress-tip-msg-DEMO2-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0" style="margin-top:0.7vh">Tab</div>
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-3"></span>
+				</div>
+-->
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!--  --------------------------------------------------- -->
+
+	<div id="progress-START-msg" class="progress-msg">
+
+		<div style="margin-top:3vh">
+			<span id="progress-START-msg-1"></span>
+		</div>
+
+	</div>
+
+
+	<div id="progress-GET_AXE1-msg" class="progress-msg">
+
+		<div style="margin-top:1vh">
+			<span id="progress-GET_AXE1-msg-1"></span>
+			<div class="icon-inline"><div class="icon-char-prev btn-2-size1"></div></div>
+			<span id="progress-GET_AXE1-msg-2"></span>
+			<div class="icon-inline"><div class="icon-char-next btn-2-size1"></div></div>
+			<span id="progress-GET_AXE1-msg-3"></span>
+		</div>
+
+		<div style="margin-top:4vh">
+			<span id="progress-GET_AXE1-msg-4"></span>
+			<div class="icon-inline"><div class="icon-arrow-tl btn-2-size1"></div></div>
+			<span id="progress-GET_AXE1-msg-5"></span>
+		</div>
+
+	</div>
+
+
+	<div id="progress-START_WOODCUTTING1-msg" class="progress-msg">
+
+		<span id="progress-START_WOODCUTTING1-msg-1"></span>
+		<div class="icon-inline"><div class="icon-arrow-tl btn-2-size1"></div></div>
+		<span id="progress-START_WOODCUTTING1-msg-2"></span>
+	</div>
+
+
+	<div id="progress-GET_AXE2-msg" class="progress-msg">
+
+		<div style="margin-top:1vh">
+			<span id="progress-GET_AXE2-msg-0"></span>
+			<div class="icon-inline"><div class="icon-char-prev btn-2-size1"></div></div>
+			<span id="progress-GET_AXE2-msg-0a"></span>
+			<div class="icon-inline"><div class="icon-char-next btn-2-size1"></div></div>
+			<span id="progress-GET_AXE2-msg-0b"></span>
+			<div class="icon-text-inline btn-2-height0" style="margin-top:0.7vh">Tab</div>
+			<span id="progress-GET_AXE2-msg-0c"></span>
+
+			<div style="height:4vh"></div>
+
+			<span id="progress-GET_AXE2-msg-1"></span>
+			<div class="icon-inline"><div class="icon-goto-basecenter btn-2-size1"></div></div>
+			<span id="progress-GET_AXE2-msg-2"></span>
+		</div>
+
+	</div>
+
+
+	<div id="progress-START_WOODCUTTING2-msg" class="progress-msg">
+<!--
+exactly as in START_WOODCUTTING1
+-->
+		<span id="progress-START_WOODCUTTING1-msg-1"></span>
+		<div class="icon-inline"><div class="icon-arrow-tl btn-2-size1"></div></div>
+		<span id="progress-START_WOODCUTTING1-msg-2"></span>
+	</div>
+
+
+	<div id="progress-BUY_AXE-msg" class="progress-msg">
+
+		<div>
+			<span id="progress-BUY_AXE-msg-1"></span>
+<!--
+			<div class="icon-inline"><div class="icon-goto-basecenter btn-2-size1"></div></div>
+			<span id="progress-BUY_AXE-msg-2"></span>
+-->
+		</div>
+
+		<div style="display:flex;margin-top:2vh">
+
+			<div style="margin-right:1vh;position:relative">
+				<div class="bg-img-baseCenter" style="height:25vh;width:21.57vh"></div>
+				<div class="bg-img-arrow-left-long" style="top:4vh;left:60%;z-index:1"></div>
+			</div>
+
+			<div>
+				<div style="height:4vh"></div>
+				<span id="progress-BUY_AXE-msg-4"></span>
+				<div class="icon-inline"><div class="icon-buy-sell-wide btn-2-size-wide1"></div></div>
+				<span id="progress-BUY_AXE-msg-5"></span>
+				<div style="height:3vh"></div>
+				<span id="progress-BUY_AXE-msg-5a"></span>
+				<div class="icon-inline"><div class="icon-goto-basecenter btn-2-size1"></div></div>
+				<span id="progress-BUY_AXE-msg-6"></span>
+			</div>
+
+		</div>
+
+		<div id='progress-BUY_AXE-tip' class="section3-has-overhdr" style="margin-top:5vh;background-color:rgba(50,20,40,0.1)">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id='progress-tip-hdr'></div></div>
+				<div></div>
+			</div>
+
+			<div class="section3-content" style="width:100%">
+
+				<div class="bg-img-light-bulb" style=""></div>
+
+				<div id="progress-tip-msg-CLICK_HOME">
+					<span id="progress-tip-msg-CLICK_HOME_BUY_AXE-1"></span>
+					<div class="icon-inline"><div class="icon-house btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_HOME-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0">Home</div>
+					<span id="progress-tip-msg-CLICK_HOME-3"></span>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div id="progress-START_WOODCUTTING_ALL-msg" class="progress-msg">
+
+		<span id="progress-START_WOODCUTTING_ALL-msg-1"></span>
+
+		<div id="btn-row-chars-axes" style="display:flex;justify-content:center;margin:1.5vh 0">
+
+			<div id="btn-chars" class="btn-2 btn-2-height1 btn-bg1 padding1" onclick="ProgressWindow.onClick_START_WOODCUTTING_ALL('chars')">
+				<div id="btn-msg-chars" class="text2b margin1"></div>
+			</div>
+
+			<div style="width:7vh"></div>
+
+			<div id="btn-axes" class="btn-2 btn-2-height1 btn-bg1 padding1" onclick="ProgressWindow.onClick_START_WOODCUTTING_ALL('axes')">
+				<div id="btn-msg-axes" class="text2b margin1"></div>
+			</div>
+		</div>
+
+
+		<div id='progress-START_WOODCUTTING_ALL-list-chars' style='display:flex;flex-direction:column'>
+		</div>
+
+		<div id='progress-START_WOODCUTTING_ALL-list-axes' style='display:flex'>
+			<div id="col-1" style='display:flex;flex-direction:column'></div>
+			<div id="col-2" style='display:flex;flex-direction:column'></div>
+			<div id="col-3" style='display:flex;flex-direction:column'></div>
+		</div>
+	</div>
+
+
+
+	<div id="progress-GATHER_MIN_AMOUNT-msg" class="progress-msg">
+
+		<div class="encircled1" style="margin:1.5vh 0 2vh 0">
+			<span id="progress-GATHER_MIN_AMOUNT-msg-1"></span>
+		</div>
+
+		<div>
+			<span id="progress-GATHER_MIN_AMOUNT-msg-2"></span>
+			<span id="progress-GATHER_MIN_AMOUNT-msg-2-val"></span>
+		</div>
+
+		<div class="loader-progress-bar">
+			<div id="progress-bar-gathered" class="loader-progress-bar-content" style="background:#bc1"></div>
+		</div>
+
+		<div id='tip' class="section3-has-overhdr" style="margin-top:5vh;background-color:rgba(50,20,40,0.1)">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id='progress-tip-hdr'></div></div>
+				<div></div>
+			</div>
+
+			<div class="section3-content" style="width:100%">
+
+				<div class="bg-img-light-bulb" style=""></div>
+
+				<div id="progress-tip-msg-CLICK_NEXT_CHAR">
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-1"></span>
+					<div class="icon-inline"><div class="icon-char-prev btn-2-size1"></div></div>
+					<div class="icon-inline"><div class="icon-char-next btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0">Tab</div>
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-3"></span>
+
+					<div style="height:2vh"></div>
+
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-MIN_AMOUNT-1"></span>
+					<div class="icon-inline"><div class="icon-camera-follow btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-MIN_AMOUNT-2"></span>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div id="progress-SELL_WOOD_MIN_AMOUNT-msg" class="progress-msg">
+
+		<div id='section-wood-intake' style="display:flex;margin-top:1.5vh">
+
+			<div style="margin-right:1.5vh;position:relative">
+				<div class="bg-img-woodIntake" style="height:25vh;width:30.76vh"></div>
+				<div class="bg-img-arrow-left-long" style="top:7.5vh;left:71%;z-index:1"></div>
+			</div>
+
+			<div>
+				<div id="progress-SELL_WOOD_MIN_AMOUNT-msg-1" style="margin:5vh 0 2vh 0"></div>
+				<div>
+					<span id="progress-SELL_WOOD_MIN_AMOUNT-msg-2"></span>
+					<div class="icon-inline"><div class="icon-sell-wood-wide btn-2-size-wide1"></div></div>
+					<span>.</span>
+				</div>
+			</div>
+		</div>
+
+		<div id='progress-SELL_WOOD_MIN_AMOUNT-tip' class="section3-has-overhdr" style="margin-top:5.5vh;background-color:rgba(50,20,40,0.1)">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id='progress-tip-hdr'></div></div>
+				<div></div>
+			</div>
+
+			<div class="section3-content" style="width:100%">
+
+				<div class="bg-img-light-bulb" style=""></div>
+
+				<div id="progress-tip-msg-CLICK_HOME">
+					<span id="progress-tip-msg-CLICK_HOME_SELL_WOOD-1"></span>
+					<div class="icon-inline"><div class="icon-house btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_HOME-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0" style="margin-top:0.7vh">Home</div> <!-- 0.7 vh moved to style -->
+					<span id="progress-tip-msg-CLICK_HOME-3"></span>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+<!--
+	<div id="progress-GATHER_FOR_LEVEL1-msg" class="progress-msg">
+
+		<div class="encircled1" style="margin:1.5vh 0 2.5vh 0">
+			<span id="progress-GATHER_FOR_LEVEL1-msg-1"></span>
+		</div>
+
+		<div style="display:flex;align-items:center">
+
+			<div class="loader-progress-bar" style="width:3vh;margin-right:1vh">
+				<div class="loader-progress-bar-content" style="width:100%"></div>
+			</div>
+
+			<div id="progress-GATHER_FOR_LEVEL1-msg-sold" style="margin-right:5vh"></div>
+
+			<div class="loader-progress-bar" style="width:3vh;margin-right:1vh">
+				<div class="loader-progress-bar-content" style="width:100%;background:#bc1"></div>
+			</div>
+
+			<div id="progress-GATHER_FOR_LEVEL1-msg-sold-gathered" style=""></div>
+		</div>
+
+
+		<div style="margin-top:1.5vh">
+			<span id="progress-GATHER_FOR_LEVEL1-msg-2"></span>
+			<span id="progress-bar-volume-val"></span>
+			<span>m<sup>3</sup></span>
+		</div>
+
+		<div class="loader-progress-bar" style="position:relative">
+			<div id="progress-bar-sold" class="loader-progress-bar-content" style="position:relative;z-index:1"></div>
+			<div id="progress-bar-sold-gathered" class="loader-progress-bar-content" style="position:absolute;background:#bc1"></div>
+		</div>
+
+	</div>
+-->
+
+	<div id="progress-CHAR_ADD-msg" class="progress-msg">
+
+		<div style="display:flex;margin-top:2vh">
+
+			<div style="margin-right:1vh;position:relative">
+				<div class="bg-img-baseCenter" style="height:25vh;width:21.57vh"></div>
+				<div class="bg-img-arrow-left-long" style="top:4vh;left:60%;z-index:1"></div>
+			</div>
+
+			<div>
+				<div style="height:4vh"></div>
+				<span id="progress-CHAR_ADD-msg-1"></span>
+				<div class="icon-inline"><div class="icon-charadd-wide btn-2-size-wide1"></div></div>
+				<span id="progress-CHAR_ADD-msg-2"></span>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div id="progress-SUMMARY-msg" class="progress-msg">
+
+		<div>
+			<span id="progress-SUMMARY-msg-num-chars"></span><span id="progress-SUMMARY-num-chars-val"></span>
+		</div>
+		<div>
+			<span id="progress-SUMMARY-msg-earned"></span><div class="icon-coins-inline icon-inline-wide1"></div><span id="progress-SUMMARY-earned-val"></span>
+		</div>
+
+		<div style="display:flex">
+			<div id="progress-SUMMARY-msg-volume"></div>
+			<div id="progress-SUMMARY-volume-val" class="margin2"></div>
+			<div id="units-volume"></div>
+			<div><sup>3</sup></div>
+		</div>
+
+		<div style="margin-top:0.7vh">
+			<span id="progress-SUMMARY-msg-time"></span><span id="progress-SUMMARY-time-val"></span>
+		</div>
+
+		<div id='tip' class="section3-has-overhdr" style="margin-top:3vh;background-color:rgba(100,50,70,0.07)">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id='progress-tip-hdr'></div></div>
+				<div></div>
+			</div>
+
+			<div class="section3-content" style="width:100%">
+
+				<div class="bg-img-light-bulb" style=""></div>
+
+				<div style="float:right;display:flex;margin:0 0 1vh 1.5vh">
+					<div class="btn-2 btn-2-size0 btn-bg1" onclick="ProgressWindow.clickNextTip(true)">
+						<div class="icon-triangle-left btn-2-size0" style="transform:scale(-1, 1)"></div>
+					</div>
+					<div class="btn-2 btn-2-size0 btn-bg1" onclick="ProgressWindow.clickNextTip()">
+						<div class="icon-triangle-left btn-2-size0"></div>
+					</div>
+				</div>
+
+				<div id="progress-tip-msg-CLICK_HOME">
+					<span id="progress-tip-msg-CLICK_HOME-1"></span>
+					<div class="icon-inline"><div class="icon-house btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_HOME-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0" style="margin-top:0.7vh">Home</div> <!-- 0.7 vh moved to style -->
+					<span id="progress-tip-msg-CLICK_HOME-3"></span>
+				</div>
+
+				<div id="progress-tip-msg-CLICK_ZOOM">
+					<span id="progress-tip-msg-CLICK_ZOOM-1"></span>
+					<div class="icon-inline"><div class="icon-zoom-in btn-2-size1"></div></div>
+					<div class="icon-inline"><div class="icon-zoom-out btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_ZOOM-2"></span>
+					<div class="icon-key-inline btn-2-size0" style="margin-top:0.7vh">+</div>
+					<div style="display:inline;margin:0 0.4vh">,</div>
+					<div class="icon-key-inline btn-2-size0" style="margin-top:0.7vh">-</div>
+					<span id="progress-tip-msg-CLICK_ZOOM-3"></span>
+				</div>
+
+				<div id="progress-tip-msg-CLICK_NEXT_CHAR">
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-1"></span>
+					<div class="icon-inline"><div class="icon-char-prev btn-2-size1"></div></div>
+					<div class="icon-inline"><div class="icon-char-next btn-2-size1"></div></div>
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0" style="margin-top:0.7vh">Tab</div>
+					<span id="progress-tip-msg-CLICK_NEXT_CHAR-3"></span>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div id="progress-SHOP_UPDATE-msg" class="progress-msg">
+
+		<div class="checkbox gears-elem" style="margin-top:2vh">
+			<input type="checkbox" id="shop-inform" onclick="ScreenShop.clickInform()">
+			<label for="shop-inform" id="shop-inform-msg">Inform</label>
+		</div>
+
+		<div id='progress-SHOP_UPDATE-tip' class="section3-has-overhdr" style="margin-top:3vh;background-color:rgba(100,50,70,0.07)">
+
+			<div class="section3-overhdr">
+				<div></div>
+				<div><div id='progress-tip-hdr'></div></div>
+				<div></div>
+			</div>
+
+			<div class="section3-content" style="width:100%">
+
+				<div class="bg-img-light-bulb" style=""></div>
+
+				<div id="">
+					<span id="progress-SHOP_UPDATE-tip-msg-1"></span>
+					<div class="icon-inline"><div class="icon-house btn-2-size1"></div></div>
+					<span id="progress-SHOP_UPDATE-tip-msg-2"></span>
+					<div class="icon-key-inline btn-2-height0 padding0" style="margin-top:0.7vh">Home</div>
+					<span id="progress-SHOP_UPDATE-tip-msg-3"></span>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+	<div style="display:flex;justify-content:center;margin-top:2vh">
+
+		<div id="progress-btn-move-to-char" class="btn-2 btn-2-height2 btn-bg1 padding2" onclick="ProgressWindow.clickMoveToChar()">
+			<div id="progress-btn-move-to-char-msg" class="text3b margin2"></div>
+		</div>
+
+		<div id="progress-btn-move-to-axe" class="btn-2 btn-2-height2 btn-bg1 padding2" onclick="ProgressWindow.onClickAxe_START_WOODCUTTING_ALL(Progress.AXE1_ID)">
+			<div id="progress-btn-move-to-axe-msg" class="text3b margin2"></div>
+		</div>
+
+		<div id="progress-btn-msg-got-it" class="btn-2 btn-2-height2 btn-bg1 padding2" style="margin-left:4vh" onclick="ProgressWindow.close()">
+			<div id="btn-msg-got-it" class="text3b margin2">Got It</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+<div id='progress-char-list-elem' class='progress-list-elem'>
+
+	<div class='progress-list-elem-overlay'></div>
+
+	<div id='char-img' style="margin:0.3vh 2vh 0.3vh 0.4vh"></div>
+
+	<div>
+		<div id='char-name' class='text2b' style=''>
+		</div>
+		<div id='line1-no' style='display:flex;align-items:center'>
+			<div class="icon-cancel-x-red btn-2-size1" style="margin-right:1vh"></div>
+			<div id='progress-char-list-line1-text-no'></div>
+		</div>
+		<div id='line1-ok' style='display:flex;align-items:center'>
+			<div class="icon-check-mark-green btn-2-size1" style="margin-right:1vh"></div>
+			<div id='progress-char-list-line1-text-ok'></div>
+		</div>
+
+		<div id='line2-no' style='display:flex;align-items:center'>
+			<div class="icon-cancel-x-red btn-2-size1" style="margin-right:1vh"></div>
+			<div id='line2-descr'></div>
+		</div>
+		<div id='line2-ok' style='display:flex;align-items:center'>
+			<div class="icon-check-mark-green btn-2-size1" style="margin-right:1vh"></div>
+			<div id='line2-descr'></div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<div id='progress-axe-list-elem' class='progress-list-elem'>
+
+	<div class='progress-list-elem-overlay'></div>
+
+	<div id='axe-img' style="margin:0.3vh 1.5vh 0.3vh 0.4vh;padding:0.5vh;border:1px solid black;border-radius:5px"></div>
+
+	<div style="padding-right:0.9vh">
+		<div id='axe-name' class='' style='font-weight:bold'></div>
+		<div style='display:flex;align-items:center'>
+			<div id='check-mark' class="icon-check-mark-green btn-2-size0" style="margin-right:1vh"></div>
+			<div id='axe-location'></div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+<div id="progress-window-small">
+
+	<div id="progress-window-small-overlay" class='progress-list-elem-overlay'></div>
+
+	<div style="display:flex;align-items:center">
+
+		<div class="bg-img-advisor img-advisor-small" style=""></div>
+
+<!--		<div class="bg-img-triangle-left-tall" style="margin-left:0.6vh;width:2vh;height:9.9vh;max-width:16px;max-height:77px"></div>
+-->		<div class="bg-img-triangle-left-tall" style="margin-left:3px;width:1.8vh;height:8.8vh;max-width:13px;max-height:66px"></div>
+	</div>
+
+</div>
+
+
+
+
+
+
+<div id="vk-payment-elem">
+
+	<div class="payment-elem">
+		<div>
+			<div>
+				<div id="price-crystals" class="icon-crystals-inline icon-large-wide"></div>
+				<div class="text3b" id="crystals-val">00</div>
+			</div>
+
+			<div class="text2b" id="payment-selection-msg-add">Добавить</div>
+
+			<div>
+				<div id="crystals-val" style="padding-right:0.6vh">00</div>
+				<div id="crystals">кристаллов</div>
+			</div>
+			<div>
+				<div id="payment-selection-msg-for">за</div>
+				<div id="votes-val" style="padding:0 0.6vh">00</div>
+				<div id="payment-selection-msg-votes">голосов</div>
+			</div>
+
+			<div class="progress-list-elem-overlay"></div>
+
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
