@@ -9,9 +9,9 @@
 
 [<img src="https://apingis.github.io/img/hypercylinder1a.jpg">](https://apingis.github.io/img/hypercylinder1a-big.jpg)
 
-[Расстояние от гиперэллипса до точки](https://apingis.github.io/papers/ru/Hyperellipse-ClosestPoint-202403-4.pdf) (pdf)<br>
-[Касательная к гиперэллипсу, покрытому слоем](https://apingis.github.io/papers/ru/CoatedHyperellipse-TangentPoint-202403-4.pdf) (pdf)<br>
-[Периметр гиперэллипса и гиперэллипса, покрытого слоем](https://apingis.github.io/papers/ru/Hyperellipse-Perimeter-202403-4.pdf) (pdf)
+[Расстояние от гиперэллипса до точки](https://apingis.github.io/papers/ru/Hyperellipse-ClosestPoint-202403-4-ru.pdf) (pdf)<br>
+[Касательная к гиперэллипсу, покрытому слоем](https://apingis.github.io/papers/ru/CoatedHyperellipse-TangentPoint-202403-4-ru.pdf) (pdf)<br>
+[Периметр гиперэллипса и гиперэллипса, покрытого слоем](https://apingis.github.io/papers/ru/Hyperellipse-Perimeter-202403-4-ru.pdf) (pdf)
 
 [Интерактивное WebGL приложение](https://apingis.github.io/v2/index-demo1.html?lang=ru) с алгоритмами работы с гиперэллипсом (desktop only)
 
