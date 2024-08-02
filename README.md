@@ -1,7 +1,7 @@
 
 ## Computing Algorithms
 
-Algorithms were originally developed and implemented for a video game project.<br>
+Before, I've attempted a video game project. I described some of algorithms which I developed and implemented for the project. Also I created interactive applications where you see claimed algorithms working.<br>
 [Version in Russian](/papers/ru/)
 
 
