@@ -21,6 +21,7 @@ Before, I've attempted a video game project. I described some of algorithms whic
 [<img src="https://apingis.github.io/img/intersections.png">](https://apingis.github.io/img/intersections-big.png)
 
 [Visibility In 3D Among Polyhedra](https://apingis.github.io/papers/VisibilityIn3DAmongPolyhedra-202406-2.pdf) (pdf)<br>
+[Polygon Placement In The Plane (Overview)](https://apingis.github.io/papers/PolygonPlacement-Overview-202412.pdf) (pdf)<br>
 
 [Interactive WebGL application](https://apingis.github.io/v2/index-demo2.html) for visibility in 3D (desktop only)
 
