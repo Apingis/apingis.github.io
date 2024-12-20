@@ -16,11 +16,12 @@
 [Интерактивное WebGL приложение](https://apingis.github.io/v2/index-demo1.html?lang=ru) с алгоритмами работы с гиперэллипсом (desktop only)
 
 
-### Алгоритмы видимости в трехмерном пространстве
+### Разные алгоритмы
 
 [<img src="https://apingis.github.io/img/intersections.png">](https://apingis.github.io/img/intersections-big.png)
 
 [Visibility In 3D Among Polyhedra](https://apingis.github.io/papers/VisibilityIn3DAmongPolyhedra-202406-2.pdf) (pdf) (на англ.)<br>
+[Размещение многоугольников на плоскости (обзор задачи)](https://apingis.github.io/papers/ru/PolygonPlacement-Overview-202412-ru.pdf) (pdf)<br>
 
 [Интерактивное WebGL приложение](https://apingis.github.io/v2/index-demo2.html?lang=ru) с алгоритмами видимости в трехмерном пространстве (desktop only)
 
