@@ -13,7 +13,7 @@ Before, I've attempted a video game project. I described some of algorithms whic
 [Tangent Line to a Hyperellipse Coated With Layer](https://apingis.github.io/papers/CoatedHyperellipse-TangentPoint-202403-4.pdf) (pdf)<br>
 [Perimeter of a Hyperellipse, Hyperellipse Coated With Layer](https://apingis.github.io/papers/Hyperellipse-Perimeter-202403-4.pdf) (pdf)
 
-<img src="https://apingis.github.io/img/check-mark-green.png"> [Interactive WebGL application](https://apingis.github.io/v2/index-demo1.html) for hyperellipse algorithms (desktop only)
+[<img src="https://apingis.github.io/img/check-mark-green.png">](https://apingis.github.io/v2/index-demo1.html) [Interactive WebGL application](https://apingis.github.io/v2/index-demo1.html) for hyperellipse algorithms (desktop only)
 
 
 ### Various Algorithms
@@ -23,7 +23,7 @@ Before, I've attempted a video game project. I described some of algorithms whic
 [Visibility In 3D Among Polyhedra](https://apingis.github.io/papers/VisibilityIn3DAmongPolyhedra-202406-2.pdf) (pdf)<br>
 [Polygon Placement In The Plane (Overview)](https://apingis.github.io/papers/PolygonPlacement-Overview-202412.pdf) (pdf)<br>
 
-[Interactive WebGL application](https://apingis.github.io/v2/index-demo2.html) for visibility in 3D (desktop only)
+[<img src="https://apingis.github.io/img/check-mark-green.png">](https://apingis.github.io/v2/index-demo1.html) [Interactive WebGL application](https://apingis.github.io/v2/index-demo2.html) for visibility in 3D (desktop only)
 
 &nbsp;
 
