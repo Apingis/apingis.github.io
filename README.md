@@ -5,6 +5,11 @@ Before, I've attempted a video game project. I described some of algorithms whic
 [Version in Russian](/papers/ru/)
 
 
+### New development direction in 2025
+
+[Collision Between Moving 2D Objects](https://apingis.github.io/papers/MovingObjects2D-Overview-202501.pdf) (pdf)<br>
+
+
 ### Hyperellipse Algorithms
 
 [<img src="https://apingis.github.io/img/hypercylinder1a.jpg">](https://apingis.github.io/img/hypercylinder1a-big.jpg)
