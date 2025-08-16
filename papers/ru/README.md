@@ -25,6 +25,7 @@
 
 [Visibility In 3D Among Polyhedra](https://apingis.github.io/papers/VisibilityIn3DAmongPolyhedra-202406-2.pdf) (pdf) (на англ.)<br>
 [Размещение многоугольников на плоскости (обзор задачи)](https://apingis.github.io/papers/ru/PolygonPlacement-Overview-202412-ru.pdf) (pdf)<br>
+[Складирование природных ресурсов](https://apingis.github.io/papers/ru/LogStorage-202508-ru.pdf) (pdf)<br>
 
 [<img src="https://apingis.github.io/img/check-mark-green.png">](https://apingis.github.io/v2/index-demo2.html?lang=ru) [Интерактивное WebGL приложение](https://apingis.github.io/v2/index-demo2.html?lang=ru) с алгоритмами видимости в трехмерном пространстве (desktop only)
 
