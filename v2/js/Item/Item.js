@@ -218,7 +218,7 @@ class Item extends EventSource {
 		return storage && storage.baseItem;
 	}
 
-	isInShop(localKey) { return this.getStorage(localKey) instanceof Shop; }
+	isInShop(localKey) { return window['Shop'] && this.getStorage(localKey) instanceof Shop; }
 
 
 	isRemoved() { return (this.flags & Item.FLAG_REMOVED) !== 0 }
