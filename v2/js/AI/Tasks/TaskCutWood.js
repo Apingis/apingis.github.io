@@ -304,6 +304,9 @@ class TaskCutWood extends Task {
 
 	doCheckLogs(tree) {
 
+		if ( TaskCutWood.CUT_ONLY )
+			return;
+
 		var dst = this.getDestinationGetLogsFromTree(tree);
 
 		if (!dst || dst.isEmpty())
