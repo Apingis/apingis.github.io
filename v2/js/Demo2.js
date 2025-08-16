@@ -15,6 +15,7 @@ function initDemo2() {
 
 	ScreenCharInfo.cameraFollow = true;
 
+	TaskCutWood.CUT_ONLY = true;
 
 	Main.area = new Area(new Rectangle(100, 100, 550, 550));
 
