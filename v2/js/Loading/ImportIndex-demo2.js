@@ -15,7 +15,7 @@ export * from '../Util/ObjectCache.js';
 export * from '../Util/AggregateGeometry.js';
 
 
-export * from '../Assets/Assets.js';
+export * from '../Assets/Assets.js?1';
 export * from '../Assets/AssetsLoader.js';
 export * from '../Assets/ItemSpec.js';
 export * from '../Assets/BranchSpec.js';
