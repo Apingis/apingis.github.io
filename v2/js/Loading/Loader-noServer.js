@@ -124,7 +124,7 @@ var Loader_noServer = {
 		var moduleText = `
 			import * as MathImportIndex from '${AppConfig.urlStatic}js/Math/MathImportIndex.js';
 			import * as DisplayImportIndex from '${AppConfig.urlStatic}js/Loading/${displayIndex}.js';
-			import * as ImportIndex from '${AppConfig.urlStatic}js/Loading/${index}.js';
+			import * as ImportIndex from '${AppConfig.urlStatic}js/Loading/${index}.js?1';
 
 			ImportIndex.doImport();
 			MathImportIndex.doImport();
