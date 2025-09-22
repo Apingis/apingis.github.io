@@ -49,6 +49,7 @@ export * from '../Item/Char.js';
 export * from '../Item/Tree.js';
 export * from '../Item/Rotor.js';
 export * from '../Item/AxeCustom.js';
+export * from '../Item/Container.js';
 
 
 export * from '../ItemData/EventSource.js';
@@ -59,6 +60,7 @@ export * from '../ItemData/StoragePosition.js';
 export * from '../ItemData/Storage.js';
 export * from '../ItemData/Equipment.js';
 export * from '../ItemData/Inventory.js';
+export * from '../ItemData/LogStorage.js';
 export * from '../ItemData/CustomData.js';
 export * from '../ItemData/CustomFeature.js';
 export * from '../ItemData/Slot.js';
@@ -101,6 +103,7 @@ export * from '../Path/TrackSolver/TrackSolver.js';
 
 export * from '../AI/ApproachPoint.js';
 export * from '../AI/VisibilityCircle.js';
+export * from '../AI/CirclePacking.js';
 export * from '../AI/VCDebug.js';
 export * from '../AI/VCFace.js';
 
