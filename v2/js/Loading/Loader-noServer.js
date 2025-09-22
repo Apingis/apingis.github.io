@@ -70,7 +70,7 @@ var Loader_noServer = {
 		}
 
 		if (AppConfig.isDemo2())
-			list.push( [ "js/Demo2.js" ] );
+			list.push( [ "js/Demo2.js?1" ] );
 
 
 		Loader.loadResources(AppConfig.urlStatic, list, () => {
