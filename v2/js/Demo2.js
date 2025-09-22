@@ -15,8 +15,9 @@ function initDemo2() {
 
 	ScreenCharInfo.cameraFollow = true;
 
-	TaskCutWood.CUT_ONLY = true;
-
+	TaskCutWood.CUT_ONLY = false;
+	LogSpec.crumbleT = Infinity;
+	
 	Main.area = new Area(new Rectangle(100, 100, 550, 550));
 
 	//Main.area.homeCameraLocation = new CameraLocation(258, 150, 4.5, 1.57);
@@ -105,6 +106,138 @@ base.addDependentItem(fan,'',new THREE.Matrix4().setPosition(0,3.35,0) );
 	]);
 
 
+
+Item.createOn3D("container", 256, 164); Item.createOn3D("container1", 254, 164); Item.createOn3D("container2", 252, 164);
+Item.createOn3D("container3", 255, 161); Item.createOn3D("container1", 252.8, 161, Math.PI);
+
+var char, spec;
+
+spec = ItemSpec.get("axeCustom1i");
+
+char = Main.getChars()[0];
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1i", customData: { features:[
+	spec.generateFeatureData("handleShape", "handle2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1i", customData: { features:[
+	spec.generateFeatureData("blade", "axeSimple"),
+	spec.generateFeatureData("handleShape", "handle2"),
+	spec.generateFeatureData("handleMat", "paintedRed"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1i", customData: { features:[
+	spec.generateFeatureData("handleMat", "paintedBrown"),
+	spec.generateFeatureData("handleWrap", "green"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1b", customData: { features:[
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+spec = ItemSpec.get("axeCustom1b");
+
+char = Main.getChars()[1];
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1b", customData: { features:[
+	spec.generateFeatureData("blade", "axeSmallBronze2"),
+	spec.generateFeatureData("handleShape", "handle2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1b", customData: { features:[
+	spec.generateFeatureData("blade", "axeSmallBronze2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1b", customData: { features:[
+	spec.generateFeatureData("handleShape", "handle1h"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1b", customData: { features:[
+	spec.generateFeatureData("handleWrap", "cherryStripe"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1b", customData: { features:[
+	spec.generateFeatureData("blade", "axeSimpleBronze"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1b", customData: { features:[
+	spec.generateFeatureData("blade", "axeSimpleBronze2"),
+	spec.generateFeatureData("handleShape", "handle2"),
+	spec.generateFeatureData("handleMat", "paintedBlack"),
+	spec.generateFeatureData("handleWrap", "black"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+spec = ItemSpec.get("axeCustom1c");
+
+char = Main.getChars()[2];
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("handleWrap", "red2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("handleMat", "dark"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("handleShape", "handle2"),
+	spec.generateFeatureData("handleWrap", "plain"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("blade", "axeHatchet"),
+	spec.generateFeatureData("handleShape", "handle2h"),
+	spec.generateFeatureData("handleMat", "paintedRed"),
+	spec.generateFeatureData("handleWrap", "white2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1i", customData: { features:[
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("blade", "axeHatchet"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+char = Main.getChars()[3];
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("handleShape", "handle1h"),
+	spec.generateFeatureData("handleMat", "plasticGreen"),
+	spec.generateFeatureData("handleWrap", "red2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("handleShape", "handle2h"),
+	spec.generateFeatureData("handleMat", "plasticBlue"),
+	spec.generateFeatureData("handleWrap", "brown2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("handleShape", "handle2"),
+	spec.generateFeatureData("handleMat", "dark"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("blade", "axeW002"),
+	spec.generateFeatureData("handleShape", "handle2h"),
+	spec.generateFeatureData("handleWrap", "black"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("blade", "axeW002"),
+	spec.generateFeatureData("handleShape", "handle3"),
+	spec.generateFeatureData("handleMat", "plasticRed"),
+	spec.generateFeatureData("handleWrap", "blue2"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { features:[
+	spec.generateFeatureData("blade", "axeW002"),
+	spec.generateFeatureData("handleShape", "handle3"),
+	spec.generateFeatureData("handleMat", "plasticWhite"),
+	spec.generateFeatureData("handleWrap", "indigo"),
+] }, positionType: Item.None }).addToInventoryOf(char);
+
+
+	
 	initDemo2_addItemSlots();
 
 	initDemo2_addEnvSlots();
