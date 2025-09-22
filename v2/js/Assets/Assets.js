@@ -124,7 +124,7 @@ var Assets = (function() {
 		} },
 */
 
-		baseCenter: { path: "items/baseCenter/baseCenter.glb" },
+		baseCenter: { path: "items/baseCenter/baseCenter.glb", what:['demo2'] },
 
 
 		//robocenter: { path: "items/baseCenter/robocenter.glb" },
