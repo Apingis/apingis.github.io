@@ -1699,6 +1699,9 @@ get height() { Report.warn(".height");return this.getHeight(); }
 		var y = this.isChoppedTree() ? 0 : this.position.y;//this.spec.y0; // TODO y0 is used only for logs
 		//console.log(`y=${y}`);
 
+		if ( this.isLog() )
+			y -= this.spec.y0;
+
 		var geometry = this.isCircular()
 			? HelperGeometry.getCylinder(this.getRadius() + padding, this.getHeight() + padding + charHeightPadding)
 			: HelperGeometry.getPolygon3D( this.getPolygon(), null, padding, y, this.getHeight() );
