@@ -52,7 +52,7 @@ var Assets = (function() {
 
 		aspen: { path: "items/aspen/aspen.glb", what:["tree"] },
 
-
+/*
 		head01a: { path: "char/headm/head01a.md2", what:["char"], onLoad: processMD2Head, arg: [ 1/16, 0/16, 1/32, 31/32 ] },
 		head01b: { path: "char/headm/head01b.md2", what:["char"], onLoad: processMD2Head, arg: [ 1/16, 0/16, 1/32, 31/32 ] },
 		head02a: { path: "char/headm/head02a.md2", what:["char"], onLoad: processMD2Head, arg: [ 1/16, 0/16, 1/16, 14/16 ] },
@@ -66,7 +66,10 @@ var Assets = (function() {
 		head05a: { path: "char/headm/head05a.md2", what:["char"], onLoad: processMD2Head, arg: [ 1/16, 3/16, 1/16, 15/16 ] },
 		head05c: { path: "char/headm/head05c.md2", what:["char"], onLoad: processMD2Head, arg: [ 1/16, 3/16, 1/16, 14/16 ] },
 		head06: { path: "char/headm/head06a.md2", what:["char"], onLoad: processMD2Head, arg: [ 1/16, 4/16, 1/16, 15/16 ] },
-
+*/
+		head08: { path: "char/headm/head08.glb", what:["char"], onLoad: (obj) => {
+			Util.addSkinToGeometry(obj.scene.getObjectByName("head08").geometry, 5);
+		}, },
 
 		charmlight: { path: "char/charmlight22.glb", what:["char"], onLoad: function(obj) {
 
