@@ -121,7 +121,8 @@ class Char extends Unit {
 
 
 	getHeadGeometry() {
-		return Assets.models[ this.charData.getHeadGeometryName() ].obj;
+		//return Assets.models[ this.charData.getHeadGeometryName() ].obj;
+		return this.charData.getHeadGeometry();
 	}
 
 
