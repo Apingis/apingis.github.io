@@ -102,7 +102,13 @@ class CharData {
 
 
 	getLangName() {
-		return this.name || Lang( this.getNameKey() );
+		//return this.name || Lang( this.getNameKey() );
+		return this.name || Lang("char_name_default") + " " + this.headId;
+	}
+
+
+	getHeadGeometry() {
+		return Assets.models.head08.obj.scene.getObjectByName("head08").geometry;
 	}
 
 
