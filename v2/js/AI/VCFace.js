@@ -461,20 +461,28 @@ class VCFace {
 		var lastAngle = this.getLocalAngle(intr.p);
 		var angle;
 
-		var	iCurrent = Math.floor(intr.t),
-			iEnd = Math.floor(nextIntr.t);
+		var	edgeNumCurrent = Math.floor(intr.t),
+			edgeNumEnd = Math.floor(nextIntr.t);
 
-		while (iCurrent !== iEnd) {
+		if (edgeNumCurrent === edgeNumEnd && nextIntr.t >= intr.t) {
 
-			iCurrent = this._facePolygon.nextIndex(iCurrent);
-			angle = this.getLocalAngle( this._facePolygon.getPoint(iCurrent) );
-
-			this.cI.intervals.mergeCircularClosestPath(lastAngle, angle);
-			lastAngle = angle;
+			this.cI.intervals.mergeCircularClosestPath( lastAngle, this.getLocalAngle(nextIntr.p) );
+			return;
 		}
 
-		angle = this.getLocalAngle(nextIntr.p);
-		this.cI.intervals.mergeCircularClosestPath(lastAngle, angle);
+		while (1) {
+
+			edgeNumCurrent = this._facePolygon.nextIndex(edgeNumCurrent);
+			angle = this.getLocalAngle( this._facePolygon.getPoint(edgeNumCurrent) );
+
+			this.cI.intervals.mergeCircularClosestPath( lastAngle, angle );
+			lastAngle = angle;
+
+			if (edgeNumCurrent === edgeNumEnd)
+				break;
+		}
+
+		this.cI.intervals.mergeCircularClosestPath( lastAngle, this.getLocalAngle(nextIntr.p) );
 	}
 
 
