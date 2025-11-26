@@ -28,6 +28,7 @@
 [Размещение многоугольников на плоскости (обзор задачи)](https://apingis.github.io/papers/ru/PolygonPlacement-Overview-202412-ru.pdf) (pdf)<br>
 [Расстояние между двумя отрезками в пространстве](https://apingis.github.io/papers/ru/Segments3D-202507-2-ru.pdf) (pdf)<br>
 [Складирование природных ресурсов](https://apingis.github.io/papers/ru/LogStorage-202508-ru.pdf) (pdf)<br>
+[Обзор задачи](https://apingis.github.io/papers/ru/TaskOverview-202511-ru.pdf) (pdf)<br>
 
 [<img src="https://apingis.github.io/img/check-mark-green.png">](https://apingis.github.io/v2/index-demo2.html?lang=ru) [Интерактивное WebGL приложение](https://apingis.github.io/v2/index-demo2.html?lang=ru) с разными алгоритмами (desktop only)
 
