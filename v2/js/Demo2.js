@@ -244,6 +244,22 @@ Item.fromJSON({ id: Local.getNextTmpId(), specId: "axeCustom1c", customData: { f
 
 	initDemo2_createTreeSlots();
 
+	LoadUser.initSlotsFromJSON([ // 2025.11
+
+		{ id:810, type:"tree", x:304.6, z:125, seed:2609010161 }, // SW
+		{ id:811, type:"tree", x:304.1, z:131, seed:2209030099 },
+		{ id:812, type:"tree", x:342.8, z:129.8, seed:2109020209 },
+		{ id:813, type:"tree", x:348.5, z:137, seed:2509030244 },
+		{ id:814, type:"tree", x:344.5, z:153.7, seed:2709000077 },
+
+		{ id:820, type:"tree", x:325, z:209.8, seed:2111000099 }, // at char #2
+		{ id:821, type:"tree", x:320, z:222.3, seed:2509020198, facing:1 },
+		{ id:822, type:"tree", x:327.2, z:233, seed:2809030297, facing:3 },
+		{ id:823, type:"tree", x:353, z:238.4, seed:3009010099, facing:-2 },
+		{ id:824, type:"tree", x:358, z:231.6, seed:2909000198, facing:2 },
+		{ id:825, type:"tree", x:363.6, z:226.2, seed:1909020397, facing:-1 },
+	]);
+
 	Engine.startFrame1();
 }
 
