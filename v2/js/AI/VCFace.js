@@ -25,6 +25,7 @@ class VCFace {
 		this._coneLIntersections = [];
 		this._coneUIntersections = [];
 		this._cylinderIntersections = [];
+		this._haveCurveIntervals = false;
 	}
 
 
@@ -274,6 +275,7 @@ class VCFace {
 			this._cylinderIntersections.forEach(intr => this.showLocalPoint(intr.p));
 		}
 
+		this._haveCurveIntervals = false;
 		this.addCurveIntervals( this._coneLCurve );
 		this.addCurveIntervals( this._coneUCurve );
 
@@ -296,8 +298,29 @@ class VCFace {
 			this.addEdgeChainToIntervals(intr, i);
 		}
 
+		if (this._haveCurveIntervals === false)
+			this.processNoCurveIntervals();
+
 		// Remains unaccounted: due to cylinder curvature it spans more
 		// than max. of 2 intersections w/ cones (considered insignificant).
+	}
+
+
+	processNoCurveIntervals() {
+
+		if (this._edgeIntersections.length !== 0)
+			Report.warn("!_haveCurveIntervals", `e=${this._edgeIntersections.length}`);
+
+		var p = this._facePolygon.getPoint(0);
+
+		if (this._coneUCurve.containsPoint(p))
+			return;
+
+		if (this._coneLCurve.containsPoint(p)) { // between curves.
+
+			if (!this._faceIntersectsCylinder || this._cylinderCurve.containsPoint(p))
+				this.addEntirePlanarPolygonToIntervals();
+		}
 	}
 
 
