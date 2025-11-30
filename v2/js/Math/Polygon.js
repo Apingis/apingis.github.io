@@ -293,7 +293,7 @@ class Polygon { // Can also represent PointSet.
 		// '23: easily appear in 3D planar faces of polyhedra
 
 		if (isLeft === 0)
-			Report.warn(`collinear vertices`, this);
+			Report.once(`collinear vertices`, this.clone());
 
 		return isLeft > 0;
 	}
