@@ -63,8 +63,6 @@ class VCFace {
 			coneL = this.vC.coneL,
 			coneU = this.vC.coneU;
 
-		this.face.getProjectionOnPlaneMatrix(plane, this._localToPlaneTransform, this._planeToLocalTransform);
-
 		// I. Rule out corner cases, determine conic type.
 
 		var coneLCurveType, coneUCurveType, cylinderCurveType;
@@ -119,6 +117,9 @@ class VCFace {
 
 			cylinderCurveType = plane.normal.y === 0 ? "parallelLines" : "ellipse";
 		}
+
+
+		this.face.getProjectionOnPlaneMatrix(plane, this._localToPlaneTransform, this._planeToLocalTransform);
 
 
 		this._coneLCurve.setFromSectioningCone(coneL, coneLCurveType, this._planeToLocalTransform,
@@ -420,23 +421,43 @@ class VCFace {
 
 		this._haveCurveIntervals = true;
 
-		var	a2 = this.getLocalAngle(p2), // trashes localP
-			localP = this.getLocalPoint(p1),
-			a1 = Math.atan2(localP.z, localP.x);
+		var	a1 = this.getLocalAngle(p1),
+			a2 = this.getLocalAngle(p2),
+			isDirectionAngleIncrease = true;
 
-		if (0) // hyperbola? TODO
-			return this.cI.intervals.mergeCircularClosestPath(a1, a2);
+		if ( curve.isEllipse() ) {
 
-		var	localV = this.getLocalVector( curve.getDirectionParamIncreaseV(p1.x, p1.y) );
-		var perpProduct = localP.x * localV.z - localP.z * localV.x;
+		} else if ( curve.isHyperbola() ) {
 
-		if (Math.abs(perpProduct) < 1e-12) {
+			if (this.plane.normal.y === 0)
+				return this.cI.intervals.mergeCircularClosestPath(a1, a2);
 
-			this.cI.intervals.mergeCircularClosestPath(a1, a2);
-			return Report.warn("low perpProduct", `value=${perpProduct} curve=${curve}`);
-		}
+			console.assert( curve.a < 0 );
+			console.assert( curve.halfSgn === 1 );
 
-		this.cI.intervals.mergeCircularInDirection(a1, a2, perpProduct > 0);
+			// is point of intersection plane and axis Y inside the selected branch?
+
+			var u = this.getIntersectionAxisYPlane_U();
+
+			if ( curve.contains(u, 0) )
+				isDirectionAngleIncrease = false;
+
+		} else
+				Report.throw("unsupported", `curve=${curve} n.y=${this.plane.normal.y}`);
+
+		if ( this.plane.normal.y < 0 )
+			isDirectionAngleIncrease = !isDirectionAngleIncrease;
+
+		this.cI.intervals.mergeCircularInDirection( a1, a2, isDirectionAngleIncrease );
+	}
+
+
+	getIntersectionAxisYPlane_U() {
+
+		var e = this._planeToLocalTransform.elements;
+		var ux = e[0], uz = e[2];
+
+		return Math.abs(ux) > Math.abs(uz) ? -e[12] / ux : -e[14] / uz;
 	}
 
 
