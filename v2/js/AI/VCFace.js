@@ -418,6 +418,8 @@ class VCFace {
 
 	addCurveInterval(curve, p1, p2) {
 
+		this._haveCurveIntervals = true;
+
 		var	a2 = this.getLocalAngle(p2), // trashes localP
 			localP = this.getLocalPoint(p1),
 			a1 = Math.atan2(localP.z, localP.x);
