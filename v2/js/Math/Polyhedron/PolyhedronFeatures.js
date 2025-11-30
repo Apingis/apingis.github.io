@@ -722,21 +722,14 @@ Object.assign(Polyhedron.Face.prototype, {
 	getProjectionOnPlaneMatrix(plane = this.getPlane(), mat4 = this._projOnPlane, mat4Inv) {
 
 		var n = plane.normal;
-		var u = this._tmpU.set(0, 0, 0);
+		var u = this._tmpU.set(0, 1, 0);
 
-		if (Math.abs(n.y) <= 1 - 1/16) { // honor Y as axis of cones and cylinders.
-		//if (0&& Math.abs(n.y) <= 0.5) {
+		u.addScaledVector( n, -n.dot(u) );
 
-			u.y = 1; // in line with world Y; +Y may be world-down if X or Z selected below
-
-		} else if (Math.abs(n.x) <= 0.5) { // Not axis aligned
-
-			u.x = 1;//n.x >= 0 ? 1 : -1;
-
-		} else
-			u.z = 1;//n.z >= 0 ? 1 : -1;
-
-		u.addScaledVector( n, -n.dot(u) ).normalize();
+		if ( u.dot(u) > 0 )
+			u.normalize();
+		else
+			u.set(1, 0, 0);
 
 		var v = this._tmpV.crossVectors(u, n); // left-handed orthonormal base.
 
