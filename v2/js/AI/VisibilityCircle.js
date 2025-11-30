@@ -141,15 +141,11 @@ class VisibilityCircle {
 
 		matrix4 && sphere.center.applyMatrix4(matrix4);
 
-		if ( !this.coneL.sphereIntersectsSurface(sphere) ) { // TODO coneLPositionLocal
+		if ( !this.coneL.overlapsSphere(sphere) )
+			return 0;
 
-			sphere.center.sub( this.coneUPositionLocal ); // oops.
-
-			if ( !this.coneU.sphereIntersectsSurface(sphere) )
-				return 0;
-
-			sphere.center.add( this.coneUPositionLocal );
-		}
+		if ( this.coneU.sphereIsFullyInside(sphere, this.coneUPositionLocal) )
+			return 0;
 
 		var d = Util.hypot(sphere.center.x, sphere.center.z);
 
