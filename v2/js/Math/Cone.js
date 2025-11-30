@@ -119,6 +119,16 @@ class Cone {
 	}
 
 
+	sphereIsFullyInside(sphere, conePositionLocal) {
+
+		var center = this._v.copy(sphere.center);
+
+		conePositionLocal && center.sub(conePositionLocal);
+
+		return this.distanceTo(center) <= -sphere.radius;
+	}
+
+
 	closestPoint(p, target = new THREE.Vector3) { // Upper half only.
 
 		var v = this._v.subVectors(p, this.position);
